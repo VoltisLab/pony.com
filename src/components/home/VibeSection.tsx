@@ -53,7 +53,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
                 {title}
               </motion.h2>
               <motion.p 
-                className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-6 sm:mb-8"
+                className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-6 sm:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
