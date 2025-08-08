@@ -23,9 +23,20 @@ const Navbar: React.FC<NavbarProps> = ({
   ],
 }) => {
   return (
-    <nav className="relative w-full h-16 overflow-hidden px-20 bg-[url('/navbg.png')]">
+    <nav className="relative w-full h-16 overflow-hidden px-16 bg-[url('/navbg.png')]">
       {/* Navigation Content */}
-      <div className="relative z-10 flex items-center justify-between h-full px-6 lg:px-8">
+
+      {/* <div className="absolute inset-0 z-0 h-16">
+        <Image
+          src={backgroundImage}
+          alt="Navbar background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/20" />
+      </div> */}
+      <div className="relative z-10 flex items-center justify-between h-full px-5">
         {/* Logo */}
         <div className="flex items-center">
           <Image

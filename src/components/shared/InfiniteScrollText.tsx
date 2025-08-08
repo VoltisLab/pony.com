@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Dot } from 'lucide-react';
 
 interface InfiniteScrollTextProps {
   items: string[];
@@ -34,12 +35,16 @@ const InfiniteScrollText: React.FC<InfiniteScrollTextProps> = ({
         }}
       >
         {duplicatedItems.map((item, index) => (
-          <span
+          <div className='flex items-center'>
+             <Dot color='#202020' className='h-5 w-5' size={25}/>
+            <span
             key={index}
-            className={`inline-block mx-8 ${itemClassName}`}
+            className={`inline-block mx-4 text-[#202020] text-[30px]`}
           >
             {item}
           </span>
+          </div>
+        
         ))}
       </motion.div>
     </div>

@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Button from '../shared/Button';
+import { motion } from 'framer-motion';
 
 interface HeroSectionProps {
   backgroundImage?: string;
@@ -32,35 +34,44 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
       
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center justify-center h-full mt-36 px-6 lg:px-8">
-        <div className="text-center ">
-          <h1 className="text-[40px] md:text-[80px] xl:text-[120px] font-bold text-white mb-6 leading-tight">
+      <div className="relative z-10 flex items-center justify-center h-full mt-16 sm:mt-20 md:mt-24 lg:mt-36 px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <motion.h1 
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-[80px] font-bold text-white mb-4 sm:mb-6 leading-tight px-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             {title}
-          </h1>
-          <p className="text-[30px] md:text-[40px] xl:text-[50px] text-white/90 mb-12 font-light">
+          </motion.h1>
+          <motion.p 
+            className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] xl:text-[50px] text-white/90 mb-8 sm:mb-10 lg:mb-12 font-light px-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
             {subtitle}
-          </p>
-          <div className="flex justify-center">
+          </motion.p>
+          <motion.div 
+            className="flex justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
             <Button
               variant="primary"
               size="lg"
               onClick={onButtonClick}
-              className="shadow-2xl hover:shadow-3xl transform hover:scale-105"
+              className="shadow-2xl hover:shadow-3xl transform hover:scale-105 text-sm sm:text-base md:text-lg"
             >
               {buttonText}
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
       
       {/* Scroll indicator */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="animate-bounce">
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </div> */}
+     
     </section>
   );
 };

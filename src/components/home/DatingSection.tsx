@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import InfiniteScrollText from '../shared/InfiniteScrollText';
+import { motion } from 'framer-motion';
 
 interface DatingSectionProps {
   leftImage?: string;
@@ -33,59 +35,105 @@ const DatingSection: React.FC<DatingSectionProps> = ({
   ],
 }) => {
   return (
-    <section className=" py-10 overflow-hidden">
-      <div className="">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="py-8 sm:py-12 overflow-hidden bg-black">
+      <div className="max-w-[1920px] mx-auto">
+        <motion.div 
+          className="flex flex-col xl:flex-row gap-5 max-h-[436px]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           {/* Left Image */}
-          <div className="relative ">
-            <div className="relative w-full h-[678px] rounded-r-2xl overflow-hidden">
+          <motion.div 
+            className="flex-1 h-[436px] relative"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-full h-full relative rounded-r-2xl overflow-hidden">
               <Image
                 src={leftImage}
                 alt="Dating couple"
                 fill
-                className="object-contain h-full"
+                className="object-cover"
               />
             </div>
-          </div>
+          </motion.div>
           
           {/* Right Content */}
-          <div className="space-y-8 bg-white h-full items-center justify-center text-center p-16 rounded-l-2xl">
-            <div>
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6">
+          <motion.div 
+            className="flex-1 bg-white flex items-end justify-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-12 sm:py-16 md:py-20 xl:pb-16 rounded-l-2xl"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="max-w-2xl text-center">
+              <motion.h2 
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
                 {title}
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                {description}
-              </p>
+              </motion.h2>
+              <motion.p 
+                className="text-base sm:text-lg leading-relaxed mb-8 sm:mb-10"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                viewport={{ once: true }}
+              >
+                In our community, dating isn\'t about swiping endlessly. We believe the strongest relationships begin with shared passions - whether that\'s music, food, pets, fitness, or films. When you join, you select your core interests, and we <span className='text-[#F25656]'>match</span> you with people who vibe with the same.
+              </motion.p>
+              
+              {/* App Store Buttons */}
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                viewport={{ once: true }}
+              >
+                <motion.a 
+                  href="#" 
+                  className="inline-block hover:opacity-80 transition-opacity"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Image
+                    src={googlePlayImage}
+                    alt="Get it on Google Play"
+                    width={100}
+                    height={48}
+                    className="h-12 sm:h-14 md:h-16 w-auto"
+                  />
+                </motion.a>
+                <motion.a 
+                  href="#" 
+                  className="inline-block hover:opacity-80 transition-opacity"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Image
+                    src={appStoreImage}
+                    alt="Download on the App Store"
+                    width={90}
+                    height={48}
+                    className="h-12 sm:h-14 md:h-16 w-auto"
+                  />
+                </motion.a>
+              </motion.div>
             </div>
-            
-            {/* App Store Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="#" className="inline-block hover:opacity-80 transition-opacity">
-                <Image
-                  src={googlePlayImage}
-                  alt="Get it on Google Play"
-                  width={160}
-                  height={48}
-                  className="h-12 w-auto"
-                />
-              </a>
-              <a href="#" className="inline-block hover:opacity-80 transition-opacity">
-                <Image
-                  src={appStoreImage}
-                  alt="Download on the App Store"
-                  width={160}
-                  height={48}
-                  className="h-12 w-auto"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
       
       {/* Infinite Scrolling Tags */}
-      <div className="mt-16">
+      <div className="max-w-[1920px] mx-auto">
         <InfiniteScrollText
           items={scrollingTags}
           speed={25}
