@@ -16,7 +16,7 @@ interface DatingSectionProps {
 const DatingSection: React.FC<DatingSectionProps> = ({
   leftImage = '/leftimage.png',
   title = 'Dating on PONY',
-  description = 'In our community, dating isn\'t about swiping endlessly. We believe the strongest relationships begin with shared passions - whether that\'s music, food, pets, fitness, or films. When you join, you select your core interests, and we match you with people who vibe with the same.',
+  description = "In our community, dating isn't about swiping endlessly. We believe the strongest relationships begin with shared passions - whether that\'s music, food, pets, fitness, or films. When you join, you select your core interests, and we match you with people who vibe with the same.",
   googlePlayImage = '/gplay.png',
   appStoreImage = '/apppay.png',
   scrollingTags = [
