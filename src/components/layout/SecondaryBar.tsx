@@ -45,8 +45,7 @@ const SecondaryBar: React.FC<SecondaryBarProps> = ({
                 <Image
                   src={button.imageSrc || `/${button.type}-store-badge.png`}
                   alt={button.alt || `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`}
-                  width={135}
-                  height={40}
+                  fill
                   className="h-10 w-auto"
                 />
               </a>
