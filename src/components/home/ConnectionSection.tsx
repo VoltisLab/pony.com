@@ -32,9 +32,9 @@ const ConnectionSection = () => {
       </div>
       
       {/* Full width container for the main content */}
-      <div className="w-full h-[436px]">
+      <div className="w-full xl:h-[536px] md:h-[336px] h-[236px]">
         <motion.div 
-          className="flex h-full gap-5"
+          className="flex h-full gap-4 xl:gap-5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -42,13 +42,13 @@ const ConnectionSection = () => {
         >
           {/* Left Section - Text */}
           <motion.div 
-            className="flex-2 relative flex bg-white items-end justify-start px-4 sm:px-8 md:px-12 lg:px-20"
+            className="flex-3 relative flex bg-white items-end justify-start px-4 sm:px-8 md:px-12 lg:px-20"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-full mb-8 sm:mb-12 lg:mb-16">
+            <div className="max-w-full mb-5 md:mb-12 xl:mb-16">
               <motion.h1 
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4 sm:mb-6"
                 initial={{ opacity: 0, y: 30 }}

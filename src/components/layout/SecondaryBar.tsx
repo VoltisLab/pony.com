@@ -32,9 +32,9 @@ const SecondaryBar: React.FC<SecondaryBarProps> = ({
 }) => {
   return (
     <div className="bg-white border-b border-gray-200 py-3">
-      <div className="px-6 lg:px-8 flex items-center justify-end">
+      <div className="px-2 md:px-8 flex items-center justify-end">
         <div className="flex items-center space-x-4">
-          <span className="text-gray-700 text-sm hover:underline cursor-pointer font-bold">{downloadText}</span>
+          <span className="text-gray-700 text-xs md:text-sm hover:underline cursor-pointer font-bold">{downloadText}</span>
           <div className="flex items-center space-x-2">
             {appStoreButtons.map((button, index) => (
               <a

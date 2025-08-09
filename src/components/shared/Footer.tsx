@@ -42,7 +42,7 @@ const Footer = () => {
               </div>
 
               {/* Footer Links */}
-              <div className="flex flex-row gap-6 lg:gap-16 font-semibold w-full md:justify-start justify-center">
+              <div className="flex flex-row gap-6 lg:gap-16 font-semibold w-full md:justify-start justify-between">
                 <div className="flex flex-col gap-3">
                   <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
                   <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>

@@ -40,13 +40,13 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section className="w-full bg-black py-12 sm:py-16 md:py-20 xl:py-24">
-      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-20">
+    <section className="w-full bg-black py-12 ">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 ">
         {/* Mobile/Tablet Layout */}
         <div className="xl:hidden">
           <div className="flex flex-col items-center space-y-8">
             {/* Image */}
-            <div className="w-full max-w-sm">
+            <div className="w-full xl:max-w-sm">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border-2 border-red-500">
                 <Image
                   src="/cafe.png"
@@ -58,7 +58,7 @@ const TestimonialSection = () => {
             </div>
 
             {/* Title and Testimonial */}
-            <div className="w-full max-w-md text-center">
+            <div className="w-full text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-6">
                 PONY-<span className="text-[#ED1B24] font-medium">tale</span>
               </h2>
@@ -97,25 +97,25 @@ const TestimonialSection = () => {
             </div>
 
             {/* World Map */}
-            <div className="w-full max-w-md">
-              <div className="relative w-full aspect-square bg-black rounded-2xl border border-gray-800 p-4">
-                <div className="w-full h-full rounded-xl relative overflow-hidden">
-                  <Image
-                    src="/map.png"
-                    alt="World map with heart icons showing global connections"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="w-full max-w-4xl h-64 sm:h-80 md:h-96">
+              <div className="w-full h-full rounded-xl relative overflow-hidden">
+                <Image
+                  src="/map.png"
+                  alt="World map with heart icons showing global connections"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+                />
               </div>
             </div>
+
           </div>
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden xl:flex items-center h-full relative">
+        <div className="hidden xl:flex h-full items-end py-10 relative">
           {/* Left Section - Layered Images */}
-          <div className="w-1/2 relative z-10">
+          <div className="flex-shrink-0 relative z-10">
             <div className="relative w-full max-w-xs">
               {/* Current Image */}
               <AnimatePresence mode="wait">
@@ -157,9 +157,9 @@ const TestimonialSection = () => {
             </div>
           </div>
 
-          {/* Middle Section - Text & Testimonial */}
-          <div className="absolute left-[45%] top-2/3 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="flex flex-col items-start">
+          {/* Middle Section - Text & Testimonial with exactly 5px spacing */}
+          <div className="flex flex-col justify-center flex-1 z-20 px-[12px] ">
+            <div className="max-w-lg">
               {/* Layered PONY-tale Text */}
               <div className="relative mb-3">
                 <AnimatePresence mode="wait">
@@ -177,13 +177,13 @@ const TestimonialSection = () => {
 
                 <motion.h2
                   key={`title-bg-${nextIndex}`}
-                  className="text-4xl max-w-xl w-xl font-semibold text-white absolute -top-2 left-12 opacity-10 -z-10"
+                  className="text-4xl font-semibold text-white absolute -top-2 left-12 opacity-10 -z-10"
                 >
                   PONY-<span className="text-4xl font-medium">tale</span>
                 </motion.h2>
               </div>
               
-              <div className="relative w-sm">
+              <div className="relative">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
@@ -191,9 +191,9 @@ const TestimonialSection = () => {
                     animate={{ opacity: 1, x: 0, scale: 1 }}
                     exit={{ opacity: 0, x: -50, scale: 0.9 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="bg-white xl:rounded-r-2xl p-2 shadow-2xl border border-[#ED1B24]"
+                    className="bg-white xl:rounded-r-2xl p-4 shadow-2xl border border-[#ED1B24]"
                   >
-                    <div className="flex items-start gap-2 mb-4">
+                    <div className="flex items-start gap-2">
                       <span className="text-red-500 text-3xl font-bold flex-shrink-0">&quot;</span>
                       <p className="text-black text-base leading-relaxed">
                         {testimonials[currentIndex].text.split('skip the awkward').map((part, index, array) => (
@@ -212,7 +212,7 @@ const TestimonialSection = () => {
               </div>
 
               {/* Navigation Dots */}
-              <div className="flex gap-2 mt-8 w-full justify-center">
+              <div className="flex gap-2 mt-8 justify-center">
                 {testimonials.map((_, index) => (
                   <motion.div
                     key={index}
@@ -229,14 +229,28 @@ const TestimonialSection = () => {
           </div>
 
           {/* Right Section - World Map */}
-          <div className="absolute right-0 top-0 w-1/2 h-full">
+          <div className="absolute right-0 top-0 w-2/3 h-full">
             <div className="relative w-full h-full bg-black rounded-2xl p-4">
               <div className="w-full h-full rounded-xl relative overflow-hidden">
                 <Image
                   src="/map.png"
                   alt="World map with heart icons showing global connections"
                   fill
-                  className="object-contain"
+                  className="object-fill"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section - World Map */}
+          <div className="absolute right-0 top-0 w-2/3 h-full">
+            <div className="relative w-full h-full bg-black rounded-2xl p-4">
+              <div className="w-full h-full rounded-xl relative overflow-hidden">
+                <Image
+                  src="/map.png"
+                  alt="World map with heart icons showing global connections"
+                  fill
+                  className="object-fill"
                 />
               </div>
             </div>

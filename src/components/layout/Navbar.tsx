@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({
   ],
 }) => {
   return (
-    <nav className="relative w-full h-16 overflow-hidden px-16 bg-[url('/navbg.png')]">
+    <nav className="relative w-full h-16 overflow-hidden px-5 xl:px-16 bg-[url('/navbg.png')]">
       {/* Navigation Content */}
 
       {/* <div className="absolute inset-0 z-0 h-16">

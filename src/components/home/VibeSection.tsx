@@ -35,7 +35,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
         >
           {/* Left Content */}
           <motion.div 
-            className="space-y-6 sm:space-y-8 md:space-y-10 max-w-md xl:max-w-xl"
+            className="space-y-6 sm:space-y-8 md:space-y-10 w-full xl:text-left text-center xl:max-w-xl"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -43,7 +43,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
           >
             <div>
               <motion.h2 
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-[160%]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -71,7 +71,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-5">
+            <div className="flex gap-4 " >
               <motion.div 
                 className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-xl sm:rounded-2xl overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
@@ -84,8 +84,10 @@ const VibeSection: React.FC<VibeSectionProps> = ({
                   src={rightImage1}
                   alt="Vibe match example 1"
                   fill
-                  className="object-cover"
+                  className="object-contain w-full"
                 />
+               
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/90 to-transparent" />
               </motion.div>
               <motion.div 
                 className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-xl sm:rounded-2xl overflow-hidden"
@@ -99,8 +101,10 @@ const VibeSection: React.FC<VibeSectionProps> = ({
                   src={rightImage2}
                   alt="Vibe match example 2"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
+                {/* Dark overlay at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/90 to-transparent" />
               </motion.div>
               <motion.div 
                 className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-xl sm:rounded-2xl overflow-hidden"
@@ -114,19 +118,21 @@ const VibeSection: React.FC<VibeSectionProps> = ({
                   src={rightImage3}
                   alt="Vibe match example 3"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
+                {/* Dark overlay at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/90 to-transparent" />
               </motion.div>
             </div>
 
             <motion.div 
-              className=""
+              className="w-full flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
               viewport={{ once: true }}
             >
-              <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-sfpro text-center leading-[160%] font-medium bg-black/50 backdrop-blur-sm px-4 sm:px-6 py-3 sm:py-4 rounded-full">
+              <p className="text-white text-lg justify-end sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-sfpro text-center leading-[160%] font-medium px-4 sm:px-6 py-3 sm:py-4">
                 {subtitle}
               </p>
             </motion.div>

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const AwkwardToEffortlessSection = () => {
   return (
     <section className="w-full bg-black overflow-hidden pb-10">
-      <div className="max-w-[1920px] mx-auto px-5 lg:px-20">
+      <div className="max-w-[1920px] mx-auto px-5 lg:px-10">
         <motion.div 
           className="flex flex-col lg:flex-row gap-5"
           initial={{ opacity: 0 }}
