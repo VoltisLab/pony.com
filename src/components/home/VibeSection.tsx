@@ -26,7 +26,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
   return (
     <section className="bg-black text-white py-12 overflow-hidden">
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-[1920px] mx-auto md:px-16 px-5 xl:px-20">
         <motion.div 
           className="grid xl:grid-cols-2 gap-8 sm:gap-12 md:gap-16 xl:gap-20 items-center"
           initial={{ opacity: 0 }}
@@ -72,7 +72,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-5">
               <motion.div 
                 className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-xl sm:rounded-2xl overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}

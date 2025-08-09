@@ -19,9 +19,10 @@ const ConnectionSection = () => {
     'Art Appreciators',
     'Tech Geeks'
   ]
+  
   return (
-    <section className="w-full bg-black ">
-       <div className="">
+    <section className="w-full bg-black overflow-hidden">
+      <div className="">
         <InfiniteScrollText
           items={scrollingTags}
           speed={20}
@@ -29,9 +30,11 @@ const ConnectionSection = () => {
           itemClassName="text-gray-500 text-sm font-medium"
         />
       </div>
-      <div className="max-w-[1920px] max-h-[536px]">
+      
+      {/* Full width container for the main content */}
+      <div className="w-full h-[436px]">
         <motion.div 
-          className="flex flex-col md:flex-row "
+          className="flex h-full gap-5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -39,7 +42,7 @@ const ConnectionSection = () => {
         >
           {/* Left Section - Text */}
           <motion.div 
-            className="w-2/3 flex bg-white h-[436px] items-end justify-start px-4 sm:px-8 md:px-12 lg:px-20 lg:py-0"
+            className="flex-2 relative flex bg-white items-end justify-start px-4 sm:px-8 md:px-12 lg:px-20"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -65,29 +68,24 @@ const ConnectionSection = () => {
               >
                 We remove the awkward, so you can focus on<br />
                 what really matters: <span className="font-bold">Building Something Real.</span>
-              </motion.p>No Awkward Starts. Just Real
-Connections.
-
-We remove the awkward, so you can focus on
-what really matters: Building Something Real.
-Couple enjoying picnic on beach
+              </motion.p>
             </div>
           </motion.div>
           
-          {/* Right Section - Image */}
+          {/* Right Section - Image that extends to the edge */}
           <motion.div 
-            className=" flex flex-col relative w-1/3"
+            className="flex-1 relative"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="w-full h-full min-h-[300px] max-h-[436px] relative">
+            <div className="w-full h-full relative">
               <Image
                 src="/picnic.png"
                 alt="Couple enjoying picnic on beach"
                 fill
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             </div>

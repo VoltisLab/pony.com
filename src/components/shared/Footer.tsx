@@ -19,15 +19,15 @@ const Footer = () => {
   
   return (
     <section className="w-full bg-black pb-8">
-      <div className="max-w-[1920px] px-6 lg:px-20">
+      <div className="px-5">
         <div className="bg-white rounded-3xl p-5 ">
-          <div className="flex flex-col xl:flex-row items-end justify-between xl:gap-8 xl:gap-16">
+          <div className="flex flex-col-reverse md:flex-row items-center md:items-end justify-center md:justify-between xl:gap-8 xl:gap-16">
             {/* Left Section - Text and Links */}
-            <div className="flex-1 xl:max-w-md items-end">
+            <div className="flex-1 md:max-w-md max-w-full w-full md:items-end items-center">
               <h2 className="text-3xl lg:text-4xl font-semibold text-black leading-tight mb-8">
                 From Awkward to<br />
                 Effortless.<br />
-                No More "Hey."
+                No More &quot;Hey.&quot;
               </h2>
               
               {/* Newsletter Subscription */}
