@@ -66,7 +66,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-2xl text-center xl:px-0 px-12">
+            <div className="max-w-2xl text-center ">
               <motion.h2 
                 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8"
                 initial={{ opacity: 0, y: 30 }}
