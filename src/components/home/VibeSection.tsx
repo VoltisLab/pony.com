@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import InfiniteScrollText from '../shared/InfiniteScrollText';
 import { motion } from 'framer-motion';
 
 interface VibeSectionProps {

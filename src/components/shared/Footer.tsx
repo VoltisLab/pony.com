@@ -24,7 +24,13 @@ const Footer = () => {
           <div className="flex flex-col-reverse md:flex-row items-center md:items-end justify-center md:justify-between xl:gap-8 xl:gap-16">
             {/* Left Section - Text and Links */}
             <div className="flex-1 md:max-w-md max-w-full w-full md:items-end items-center">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-black leading-tight mb-8">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-black leading-tight mb-8 md:block hidden  ">
+                From Awkward to<br />
+                Effortless.<br />
+                No More &quot;Hey.&quot;
+              </h2>
+
+              <h2 className="text-3xl lg:text-4xl font-semibold text-black leading-tight mb-8 block md:hidden text-center">
                 From Awkward to<br />
                 Effortless.<br />
                 No More &quot;Hey.&quot;

@@ -6,23 +6,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 const testimonials = [
   {
     id: 1,
-    text: "I was matched with someone who loves Formula 1 and 70s rock. We went to a Queen's tribute concert for our first date. Pony makes it easy to skip the awkward small talk and jump into stuff we both care about."
+    text: `I was matched with someone who loves Formula 1 and 70s rock. We went to a Queen's tribute concert for our first date. Pony makes it easy to skip the awkward small talk and jump into stuff we both care about.`
   },
   {
     id: 2,
-    text: "We both love hiking and discovered we had the same favorite trail. Our first date was a sunrise hike, and we've been inseparable ever since. Pony really knows how to match people with shared passions."
+    text: `We both love hiking and discovered we had the same favorite trail. Our first date was a sunrise hike, and we've been inseparable ever since. Pony really knows how to match people with shared passions.`
   },
   {
     id: 3,
-    text: "As a foodie, I was skeptical about dating apps. But Pony matched me with someone who shares my love for trying new restaurants. Our first date was at this amazing fusion place we both wanted to try."
+    text: `As a foodie, I was skeptical about dating apps. But Pony matched me with someone who shares my love for trying new restaurants. Our first date was at this amazing fusion place we both wanted to try.`
   },
   {
     id: 4,
-    text: "We both have rescue dogs and love volunteering at animal shelters. Pony brought us together through our shared compassion for animals. Now we're planning our future with our furry family."
+    text: `We both have rescue dogs and love volunteering at animal shelters. Pony brought us together through our shared compassion for animals. Now we're planning our future with our furry family.`
   },
   {
     id: 5,
-    text: "Both gamers, we connected over our favorite RPGs. Our first date was a gaming marathon, and we've been leveling up our relationship ever since. Pony understands that real connections come from shared interests."
+    text: `Both gamers, we connected over our favorite RPGs. Our first date was a gaming marathon, and we've been leveling up our relationship ever since. Pony understands that real connections come from shared interests.`
   }
 ];
 
@@ -65,7 +65,7 @@ const TestimonialSection = () => {
               
               <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-2xl border border-[#ED1B24]">
                 <div className="flex items-start gap-2">
-                  <span className="text-red-500 text-2xl sm:text-3xl font-bold flex-shrink-0">"</span>
+                  <span className="text-red-500 text-2xl sm:text-3xl font-bold flex-shrink-0">&quot;</span>
                   <p className="text-black text-sm sm:text-base leading-relaxed">
                     {testimonials[currentIndex].text.split('skip the awkward').map((part, index, array) => (
                       <React.Fragment key={index}>
@@ -76,7 +76,7 @@ const TestimonialSection = () => {
                       </React.Fragment>
                     ))}
                   </p>
-                  <span className="text-red-500 text-2xl sm:text-3xl font-bold flex-shrink-0">"</span>
+                  <span className="text-red-500 text-2xl sm:text-3xl font-bold flex-shrink-0">&quot;</span>
                 </div>
               </div>
 
@@ -194,7 +194,7 @@ const TestimonialSection = () => {
                     className="bg-white xl:rounded-r-2xl p-2 shadow-2xl border border-[#ED1B24]"
                   >
                     <div className="flex items-start gap-2 mb-4">
-                      <span className="text-red-500 text-3xl font-bold flex-shrink-0">"</span>
+                      <span className="text-red-500 text-3xl font-bold flex-shrink-0">&quot;</span>
                       <p className="text-black text-base leading-relaxed">
                         {testimonials[currentIndex].text.split('skip the awkward').map((part, index, array) => (
                           <React.Fragment key={index}>
@@ -205,7 +205,7 @@ const TestimonialSection = () => {
                           </React.Fragment>
                         ))}
                       </p>
-                      <span className="text-red-500 text-3xl font-bold flex-shrink-0">"</span>
+                      <span className="text-red-500 text-3xl font-bold flex-shrink-0">&quot;</span>
                     </div>
                   </motion.div>
                 </AnimatePresence>

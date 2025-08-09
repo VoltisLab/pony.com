@@ -7,13 +7,11 @@ interface NavLink {
 }
 
 interface NavbarProps {
-  backgroundImage?: string;
   logo?: string;
   links?: NavLink[];
 }
 
 const Navbar: React.FC<NavbarProps> = ({
-  backgroundImage = '/navbg.png',
   logo = '/logo.png',
   links = [
     { label: 'Mission', href: '/mission' },

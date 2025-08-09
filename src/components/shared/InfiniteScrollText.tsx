@@ -14,7 +14,7 @@ const InfiniteScrollText: React.FC<InfiniteScrollTextProps> = ({
   items,
   speed = 30,
   className = '',
-  itemClassName = '',
+//   itemClassName = '',
 }) => {
   const duplicatedItems = [...items, ...items, ...items];
 
