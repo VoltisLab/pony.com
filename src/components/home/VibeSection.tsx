@@ -14,8 +14,8 @@ interface VibeSectionProps {
 }
 
 const VibeSection: React.FC<VibeSectionProps> = ({
-  title = '"We group people by actual vibe, not just who\'s nearby."',
-  subtitle = 'Pick your vibe, don\'t look back.',
+  title = `We group people by actual vibe, not just who's nearby.`,
+  subtitle = `Pick your vibe, don't look back`,
   description = 'We don\'t think chemistry comes from geography. That\'s why your matches are based on your world, your energy, and your rhythm.',
   rightImage1 = '/v3.png',
   rightImage2 = '/v1.png',

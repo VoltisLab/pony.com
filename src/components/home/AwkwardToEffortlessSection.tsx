@@ -24,13 +24,13 @@ const AwkwardToEffortlessSection = () => {
           >
             <div className="relative w-full rounded-2xl lg:rounded-3xl overflow-hidden group">
               {/* Main Background Image */}
-              <div className="absolute inset-0">
+              <div className="xl:absolute xl:inset-0">
                 <Image
                   src="/awkward.png"
                   alt="Couple at dimly lit cafe or bar having conversation"
                   height={612}
                   width={1191}
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain w-full transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
               </div>
@@ -48,7 +48,7 @@ const AwkwardToEffortlessSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.h2 
-                    className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-black text-white leading-[1.1] mb-4 lg:mb-6"
+                    className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-black text-white leading-[1.1] mb-4 lg:mb-6"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -59,7 +59,7 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
                   
                   <motion.p 
-                    className="text-white text-sm lg:text-base font-semibold xl:text-lg leading-relaxed lg:leading-relaxed max-w-sm"
+                    className="text-white text-xs lg:text-base font-semibold xl:text-lg leading-relaxed lg:leading-relaxed max-w-sm"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
@@ -74,7 +74,7 @@ const AwkwardToEffortlessSection = () => {
 
           {/* Right Section - Two Stacked Images */}
           <motion.div 
-            className="w-full flex-1 flex flex-col gap-5"
+            className="w-full md:flex-1 flex flex-col gap-5"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -94,7 +94,7 @@ const AwkwardToEffortlessSection = () => {
                 alt="Two people sitting on wooden dock with mountains in background"
                 height={295}
                 width={603}
-                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                className="object-contain w-full transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
@@ -113,7 +113,7 @@ const AwkwardToEffortlessSection = () => {
                 alt="Couple dancing outdoors with concrete wall background"
                 height={295}
                 width={603}
-                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                className="object-contain w-full transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
