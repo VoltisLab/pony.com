@@ -35,7 +35,7 @@ const SecondaryBar: React.FC<SecondaryBarProps> = ({
       <div className="px-2 md:px-8 flex items-center justify-end">
         <div className="flex items-center space-x-4">
           <span className="text-gray-700 text-xs md:text-sm hover:underline cursor-pointer font-bold">{downloadText}</span>
-          <div className="flex items-center space-x-2">
+          <div className="md:flex items-center space-x-2 hidden">
             {appStoreButtons.map((button, index) => (
               <a
                 key={index}
@@ -47,6 +47,24 @@ const SecondaryBar: React.FC<SecondaryBarProps> = ({
                   alt={button.alt || `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`}
                   width={135}
                   height={40}
+                  className="h-10 w-auto"
+                />
+              </a>
+            ))}
+          </div>
+
+          <div className="flex md:hidden items-center space-x-2">
+            {appStoreButtons.map((button, index) => (
+              <a
+                key={index}
+                href={button.href}
+                className="inline-block hover:opacity-80 transition-opacity duration-200"
+              >
+                <Image
+                  src={button.imageSrc || `/${button.type}-store-badge.png`}
+                  alt={button.alt || `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`}
+                  width={100}
+                  height={35}
                   className="h-10 w-auto"
                 />
               </a>
