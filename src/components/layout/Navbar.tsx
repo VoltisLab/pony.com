@@ -97,15 +97,15 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <>
-      <nav className="relative w-full h-16 overflow-hidden px-4 md-px-5 xl:px-16 bg-[url('/navbg.png')]">
+      <nav className="relative w-full h-12 lg:h-16 overflow-hidden px-4 md-px-5 xl:px-16 bg-[url('/navbg.png')]">
         <div className="relative z-10 flex items-center justify-between h-full ">
           {/* Logo */}
           <div className="flex items-center">
             <Image
               src={logo}
               alt="PONY Logo"
-              width={120}
-              height={40}
+              width={150}
+              height={50}
               className="h-8 w-auto"
               priority
             />

@@ -26,15 +26,15 @@ const ConnectionSection = () => {
         <InfiniteScrollText
           items={scrollingTags}
           speed={20}
-          className="py-4"
+          className="lg:py-4"
           itemClassName="text-gray-500 text-sm font-medium"
         />
       </div>
       
       {/* Full width container for the main content */}
-      <div className="w-full xl:h-[536px] md:h-[336px] h-[236px]">
+      <div className="w-full xl:h-[536px] md:h-[336px] h-screen">
         <motion.div 
-          className="flex h-full gap-4 xl:gap-5"
+          className="flex flex-col lg:flex-row h-full gap-2 xl:gap-5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -42,15 +42,15 @@ const ConnectionSection = () => {
         >
           {/* Left Section - Text */}
           <motion.div 
-            className="flex-3 relative flex bg-white items-end justify-start px-4 sm:px-8 md:px-12 lg:px-20"
+            className="flex-3 relative flex bg-white h-[50vh] lg:h-fit items-end justify-start px-4 sm:px-8 md:px-12 lg:px-20"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-full mb-5 md:mb-12 xl:mb-16">
+            <div className="max-w-full w-full lg:w-fit mb-5 md:mb-12 xl:mb-16 flex flex-col items-center justify-center lg:items-start  ">
               <motion.h1 
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4 sm:mb-6"
+                className="text-xl lg:w-full w-[70vw] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4 sm:mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -60,7 +60,7 @@ const ConnectionSection = () => {
                 Connections.
               </motion.h1>
               <motion.p 
-                className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl text-black leading-relaxed"
+                className="text-[10px] sm:text-lg md:text-xl lg:text-xl xl:text-2xl text-black leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -80,7 +80,7 @@ const ConnectionSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="w-full h-full relative">
+            <div className="w-full lg:h-full h-[50vh] relative">
               <Image
                 src="/picnic.png"
                 alt="Couple enjoying picnic on beach"
