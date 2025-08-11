@@ -37,7 +37,7 @@ const InfiniteScrollText: React.FC<InfiniteScrollTextProps> = ({
         {duplicatedItems.map((item, index) => (
           <div key={index} className='flex items-center'>
             <Dot color='#202020' className='h-5 w-5' size={25}/>
-            <span className={`inline-block mx-4 text-[#202020] text-[30px]`}>
+            <span className={`inline-block mx-4 text-[#202020] text-xs lg:text-[30px]`}>
             {item}
             </span>
           </div>

@@ -31,10 +31,10 @@ const DatingSection: React.FC<DatingSectionProps> = ({
   ],
 }) => {
   return (
-    <section className="py-8 sm:py-12 overflow-hidden bg-black">
+    <section className="py-0 sm:py-12 overflow-hidden bg-black">
       <div className="max-w-[1920px] mx-auto">
         <motion.div 
-          className="flex flex-col xl:flex-row gap-5 max-h-[436px]"
+          className="flex flex-col-reverse xl:flex-row gap-2 lg:max-h-[436px]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -42,13 +42,13 @@ const DatingSection: React.FC<DatingSectionProps> = ({
         >
           {/* Left Image */}
           <motion.div 
-            className="flex-1 h-[436px] relative"
+            className="flex-1 h-[436px] relative "
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-full h-full relative rounded-r-2xl overflow-hidden">
+            <div className="w-full h-[400px] lg:h-full relative lg:rounded-r-2xl lg:overflow-hidden">
               <Image
                 src={leftImage}
                 alt="Dating couple"
@@ -60,15 +60,15 @@ const DatingSection: React.FC<DatingSectionProps> = ({
           
           {/* Right Content */}
           <motion.div 
-            className="flex-1 bg-white flex items-end justify-center px-8 md:px-16 xl:px-20 py-12 md:py-20 xl:pb-16 rounded-l-2xl"
+            className="flex-1 bg-white flex items-end justify-center px-8 md:px-16 xl:px-20 pt-28 md:pt-0 md:py-20 xl:pb-16 lg:rounded-l-2xl"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-2xl text-center ">
+            <div className="max-w-2xl text-center flex flex-col items-center justify-end ">
               <motion.h2 
-                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8"
+                className="text-2xl sm:text-3xl w-[120px] md:w-fit text-center md:text-4xl font-bold mb-6 sm:mb-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -77,7 +77,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
                 {title}
               </motion.h2>
               <motion.p 
-                className="text-base sm:text-lg leading-relaxed mb-8 sm:mb-10"
+                className="text-sm sm:text-lg leading-relaxed mb-1 sm:mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -156,7 +156,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
               </motion.div>
 
               <motion.div 
-                className="flex md:hidden flex-row gap-4 justify-center items-center "
+                className="hidden md:hidden flex-row gap-4 justify-center items-center "
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
@@ -228,7 +228,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
       </div>
       
       {/* Infinite Scrolling Tags */}
-      <div className="max-w-[1920px] mx-auto xl:mt-0 mt-10">
+      <div className="max-w-[1920px] hidden md:flex mx-auto xl:mt-0 mt-10">
         <InfiniteScrollText
           items={scrollingTags}
           speed={25}

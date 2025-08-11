@@ -16,25 +16,26 @@ interface SecondaryBarProps {
 const SecondaryBar: React.FC<SecondaryBarProps> = ({
   downloadText = 'Download Now',
   appStoreButtons = [
-    { 
-      type: 'google', 
-      href: '#',
-      imageSrc: '/gplay.png',
-      alt: 'Get it on Google Play'
-    },
+    
     { 
       type: 'apple', 
       href: '#',
       imageSrc: '/apppay.png',
       alt: 'Download on the App Store'
     },
+    { 
+      type: 'google', 
+      href: '#',
+      imageSrc: '/gplay.png',
+      alt: 'Get it on Google Play'
+    },
   ],
 }) => {
   return (
-    <div className="bg-white border-b border-gray-200 py-3">
+    <div className="bg-white border-b border-gray-200 py-1 lg:py-3">
       <div className="px-2 md:px-8 flex items-center justify-end">
         <div className="flex items-center space-x-4">
-          <span className="text-gray-700 text-xs md:text-sm hover:underline cursor-pointer font-bold">{downloadText}</span>
+          <span className="text-gray-700 hidden lg:block text-xs md:text-sm hover:underline cursor-pointer font-bold">{downloadText}</span>
           <div className="md:flex items-center space-x-2 hidden">
             {appStoreButtons.map((button, index) => (
               <a

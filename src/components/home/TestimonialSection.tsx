@@ -41,13 +41,13 @@ const TestimonialSection = () => {
 
   return (
     <section className="w-full bg-black py-12 ">
-      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 ">
+      <div className="max-w-[1920px] mx-auto px-0 sm:px-6 lg:px-8 xl:px-20 ">
         {/* Mobile/Tablet Layout */}
         <div className="xl:hidden">
           <div className="flex flex-col items-center space-y-8">
             {/* Image */}
-            <div className="w-full xl:max-w-sm">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border-2 border-red-500">
+            <div className="w-full xl:max-w-sm flex justify-center lg:justify-center">
+              <div className="relative lg:w-full w-[150px] aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden border-2 border-red-500">
                 <Image
                   src="/cafe.png"
                   alt="Couple at cafe - woman with hijab, man with blue beanie"
@@ -63,10 +63,10 @@ const TestimonialSection = () => {
                 PONY-<span className="text-[#ED1B24] font-medium">tale</span>
               </h2>
               
-              <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-2xl border border-[#ED1B24]">
+              <div className="bg-white rounded-l-none lg:rounded-l-2xl rounded-2xl p-4 mr-4 sm:p-6 shadow-2xl border border-[#ED1B24]">
                 <div className="flex items-start gap-2">
                   <span className="text-red-500 text-2xl sm:text-3xl font-bold flex-shrink-0">&quot;</span>
-                  <p className="text-black text-sm sm:text-base leading-relaxed">
+                  <p className="text-black text-xs sm:text-base leading-relaxed">
                     {testimonials[currentIndex].text.split('skip the awkward').map((part, index, array) => (
                       <React.Fragment key={index}>
                         {part}
@@ -81,11 +81,11 @@ const TestimonialSection = () => {
               </div>
 
               {/* Navigation Dots */}
-              <div className="flex gap-2 mt-6 justify-center">
+              <div className="flex gap-2 mt-2 lg:mt-6 justify-center">
                 {testimonials.map((_, index) => (
                   <motion.div
                     key={index}
-                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                    className={`lg:w-2 lg:h-2 h-1 w-1 rounded-full transition-colors duration-300 ${
                       index === currentIndex ? 'bg-[#FFFFFF4D]' : 'bg-[#FFFFFF1A]'
                     }`}
                     animate={{

@@ -3,48 +3,36 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <section className="w-full bg-black pb-8">
+    <section className="w-full bg-black pb-1 lg:pb-8">
       <div className="md:px-5">
-        <div className="bg-white rounded-3xl p-4 ">
-          <div className="flex flex-col-reverse md:flex-row items-center md:items-end justify-center md:justify-between xl:gap-8 xl:gap-16">
+        <div className="bg-white rounded-2xl p-4 mx-3 lg:mx-0 ">
+          <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between  xl:gap-16">
             {/* Left Section - Text and Links */}
-            <div className="flex-1 md:max-w-md max-w-full w-full md:items-end items-center">
-              <h2 className="text-3xl lg:text-5xl font-semibold text-black leading-[145%] mb-5 md:block hidden  ">
+            <div className="flex-1 md:max-w-md max-w-full w-full md:items-end items-start">
+              <h2 className="text-base lg:text-5xl font-semibold text-black leading-[145%] lg:mb-5 md:block hidden  ">
                 From Awkward to<br />
                 Effortless.<br />
                 No More &quot;Hey.&quot;
               </h2>
 
-              <h2 className="text-2xl font-semibold text-black leading-tight mb-8 block md:hidden text-center">
+              <h2 className="text-2xl font-semibold text-black leading-tight mb-2 lg:mb-8 block md:hidden w-[80vw]">
                 From Awkward to Effortless. No More &quot;Hey.&quot;
               </h2>
               
               {/* Newsletter Subscription */}
-              <div className="mb-12 w-full">
-                <button className="justify-center w-full md:w-[210px] px-4 p-1.5 border rounded-full text-[#BCBCBC] text-sm hover:bg-gray-50 transition-colors">
+              <div className="mb-2 lg:mb-12 w-[70vw] lg:w-full">
+                <button className="justify-start lg:justify-center flex w-full md:w-[210px] px-3 lg:px-4 p-1.5 border rounded-full text-black text-sm hover:bg-gray-50 transition-colors">
                   Subscribe to our Newsletter
                 </button>
               </div>
 
-              {/* Footer Links */}
-              <div className="flex flex-row gap-6 lg:gap-16 font-semibold w-full md:justify-start justify-between">
-                <div className="flex flex-col gap-3">
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
-                </div>
-                <div className="flex flex-col gap-3">
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
-                </div>
-              </div>
+             
             </div>
 
             {/* Right Section - Image and App Downloads */}
             <div className="flex-1 flex flex-col items-center lg:items-end w-full md:max-w-[320px]">
               {/* Main Image */}
-              <div className="w-full xl:max-w-lg rounded-2xl mb-6 relative overflow-hidden">
+              <div className="w-full h-[400px] xl:max-w-lg rounded-sm mb-6 relative overflow-hidden">
                 <Image
                   src="/footer.png"
                   alt="Couple sitting on dock with mountain lake background"
@@ -55,7 +43,7 @@ const Footer = () => {
               </div>
 
               {/* Language Selector */}
-              <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg mb-4">
+              <div className="w-full hidden lg:flex max-w-sm lg:max-w-md xl:max-w-lg mb-4">
                 <div className="flex items-center justify-between p-1.5 w-full md:max-w-[90%] border border-[#9E9E9E] rounded-full bg-white">
                   <div className="flex items-center gap-3">
                   <svg width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +58,7 @@ const Footer = () => {
                 </div>
               </div>
 
-           <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg flex flex-row gap-3">
+           <div className="w-full hidden  max-w-sm lg:max-w-md xl:max-w-lg lg:flex flex-row gap-3">
 
               <svg width="180" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M173.333 55.668H6.66667C3.00167 55.668 0 52.5349 0 48.7095V6.95853C0 3.1331 3.00167 4.3869e-05 6.66667 4.3869e-05H173.333C176.998 4.3869e-05 180 3.1331 180 6.95853V48.7095C180 52.5349 176.998 55.668 173.333 55.668Z" fill="black"/>
@@ -119,12 +107,25 @@ const Footer = () => {
 </div>
             </div>
           </div>
+         {/* Footer Links */}
+              <div className="flex flex-row gap-6 lg:gap-16 lg:font-semibold w-full md:justify-start justify-between mt-14 lg:mt-0">
+                <div className="flex flex-col gap-3">
+                  <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Privacy Policy</a>
+                  <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Terms of Use</a>
+                  <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Cookie Policy</a>
+                </div>
+                <div className="flex flex-col gap-3 mr-20 lg:mr-0 ">
+                  <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Privacy Policy</a>
+                  <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Terms of Use</a>
+                  <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Cookie Policy</a>
+                </div>
+              </div>
         </div>
       </div>
       
       {/* Copyright */}
-      <div className="text-center mt-8">
-        <p className="text-gray-500 text-sm">©2025 Voltis Labs LTD.</p>
+      <div className="text-center mt-2 lg:mt-8">
+        <p className="text-gray-500 text-[10px] lg:text-sm">©2025 Voltis Labs LTD.</p>
       </div>
     </section>
   );

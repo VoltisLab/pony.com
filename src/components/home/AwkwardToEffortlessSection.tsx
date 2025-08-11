@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 const AwkwardToEffortlessSection = () => {
   return (
     <section className="w-full bg-black overflow-hidden pb-10">
-      <div className="max-w-[1920px] mx-auto px-5 lg:px-10">
+      <div className="max-w-[1920px] mx-auto px-2 lg:px-10">
         <motion.div 
-          className="flex flex-col lg:flex-row gap-5"
+          className="flex flex-col lg:flex-row gap-2 lg:gap-5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -22,7 +22,7 @@ const AwkwardToEffortlessSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="relative w-full rounded-2xl lg:rounded-3xl overflow-hidden group">
+            <div className="relative w-full rounded-none lg:rounded-3xl overflow-hidden group">
               {/* Main Background Image */}
               <div className="xl:absolute xl:inset-0">
                 <Image
@@ -48,7 +48,7 @@ const AwkwardToEffortlessSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.h2 
-                    className="text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-black text-white leading-[1.1] mb-4 lg:mb-6"
+                    className="text-lg lg:text-3xl xl:text-4xl 2xl:text-5xl font-black text-white leading-[1.1] mb-4 lg:mb-6"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -59,7 +59,7 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
                   
                   <motion.p 
-                    className="text-white text-xs lg:text-base font-semibold xl:text-lg leading-relaxed lg:leading-relaxed max-w-sm"
+                    className="text-white text-[10px] lg:text-base md:font-semibold xl:text-lg leading-relaxed lg:leading-relaxed max-w-sm"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
@@ -74,7 +74,7 @@ const AwkwardToEffortlessSection = () => {
 
           {/* Right Section - Two Stacked Images */}
           <motion.div 
-            className="w-full md:flex-1 flex flex-col gap-5"
+            className="w-full md:flex-1 flex flex-col gap-2 lg:gap-5"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -82,7 +82,7 @@ const AwkwardToEffortlessSection = () => {
           >
             {/* Top Image - Dock Scene */}
             <motion.div 
-              className="w-full rounded-2xl lg:rounded-3xl overflow-hidden relative group"
+              className="w-full rounded-sm lg:rounded-3xl overflow-hidden relative group"
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -101,7 +101,7 @@ const AwkwardToEffortlessSection = () => {
 
             {/* Bottom Image - Urban Dance Scene */}
             <motion.div 
-              className="w-full rounded-2xl lg:rounded-3xl overflow-hidden relative group"
+              className="w-full rounded-sm lg:rounded-3xl overflow-hidden relative group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
