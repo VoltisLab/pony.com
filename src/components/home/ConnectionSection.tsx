@@ -42,7 +42,7 @@ const ConnectionSection = () => {
         >
           {/* Left Section - Text */}
           <motion.div 
-            className="flex-3 relative flex bg-white h-[50vh] lg:h-fit items-end justify-start px-4 sm:px-8 md:px-12 lg:px-20"
+            className="flex-3 relative flex bg-white h-[50vh] lg:h-full items-end justify-start px-4  sm:px-8 md:px-12 lg:px-20"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -80,7 +80,7 @@ const ConnectionSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="w-full lg:h-full h-[50vh] relative">
+            <div className="w-full lg:w-[30vw] lg:h-full h-[50vh] relative">
               <Image
                 src="/picnic.png"
                 alt="Couple enjoying picnic on beach"

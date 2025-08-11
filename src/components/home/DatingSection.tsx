@@ -31,7 +31,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
   ],
 }) => {
   return (
-    <section className="py-0 sm:py-12 overflow-hidden bg-black">
+    <section className="py-0 pt-2 lg:pt-8 sm:py-12 overflow-hidden bg-black">
       <div className="max-w-[1920px] mx-auto">
         <motion.div 
           className="flex flex-col-reverse xl:flex-row gap-2 lg:max-h-[436px]"
@@ -48,7 +48,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-full h-[400px] lg:h-full relative lg:rounded-r-2xl lg:overflow-hidden">
+            <div className="w-full h-[400px] lg:h-[70vh] relative lg:rounded-r-2xl lg:overflow-hidden">
               <Image
                 src={leftImage}
                 alt="Dating couple"
@@ -60,7 +60,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
           
           {/* Right Content */}
           <motion.div 
-            className="flex-1 bg-white flex items-end justify-center px-8 md:px-16 xl:px-20 pt-28 md:pt-0 md:py-20 xl:pb-16 lg:rounded-l-2xl"
+            className="flex-1 bg-white flex items-end lg:h-[70vh] justify-center px-8 md:px-16 xl:px-20 pt-28 md:pt-0  lg:pb-6 lg:rounded-l-2xl"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -100,7 +100,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <svg width="180" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="150" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M173.333 55.668H6.66667C3.00167 55.668 0 52.5349 0 48.7095V6.95853C0 3.1331 3.00167 4.3869e-05 6.66667 4.3869e-05H173.333C176.998 4.3869e-05 180 3.1331 180 6.95853V48.7095C180 52.5349 176.998 55.668 173.333 55.668Z" fill="black"/>
 <path d="M173.333 1.11514C176.42 1.11514 178.932 3.73675 178.932 6.95853V48.7095C178.932 51.9313 176.42 54.5529 173.333 54.5529H6.66667C3.58 54.5529 1.06833 51.9313 1.06833 48.7095V6.95853C1.06833 3.73675 3.58 1.11514 6.66667 1.11514H173.333ZM173.333 4.3869e-05H6.66667C3.00167 4.3869e-05 0 3.1331 0 6.95853V48.7095C0 52.5349 3.00167 55.668 6.66667 55.668H173.333C176.998 55.668 180 52.5349 180 48.7095V6.95853C180 3.1331 176.998 4.3869e-05 173.333 4.3869e-05Z" fill="#A6A6A6"/>
 <path d="M12.9152 10.4918C12.5235 10.9198 12.2969 11.5861 12.2969 12.4489V43.2263C12.2969 44.0892 12.5235 44.7555 12.9152 45.1834L13.0119 45.2773L29.5352 28.0377V27.6306L13.0119 10.391L12.9152 10.4918Z" fill="white"/>
@@ -124,7 +124,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <svg width="180" height="52" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="150" height="52" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M179 46.0026C179 48.7738 176.709 51.0184 173.874 51.0184H6.13243C3.2995 51.0184 1 48.7738 1 46.0026V6.00308C1 3.23325 3.2995 0.980713 6.13243 0.980713H173.873C176.709 0.980713 178.999 3.23325 178.999 6.00308L179 46.0026Z" fill="black"/>
 <path d="M173.333 1.04114C176.42 1.04114 178.932 3.49001 178.932 6.49952V45.4995C178.932 48.509 176.42 50.9579 173.333 50.9579H6.66667C3.58 50.9579 1.06833 48.509 1.06833 45.4995V6.49952C1.06833 3.49001 3.58 1.04114 6.66667 1.04114H173.333ZM173.333 -0.000485533H6.66667C3.00167 -0.000485533 0 2.92614 0 6.49952V45.4995C0 49.0729 3.00167 51.9995 6.66667 51.9995H173.333C176.998 51.9995 180 49.0729 180 45.4995V6.49952C180 2.92614 176.998 -0.000485533 173.333 -0.000485533Z" fill="#A6A6A6"/>
 <path d="M40.1695 25.7186C40.1308 21.5287 43.6881 19.4903 43.8508 19.3954C41.8361 16.5315 38.7135 16.1402 37.6161 16.109C34.9935 15.8399 32.4495 17.6391 31.1135 17.6391C29.7508 17.6391 27.6935 16.135 25.4761 16.1792C22.6228 16.2221 19.9535 17.8328 18.4895 20.334C15.4681 25.4339 17.7215 32.9284 20.6161 37.0507C22.0641 39.0696 23.7561 41.3238 25.9708 41.2445C28.1375 41.1574 28.9468 39.8977 31.5615 39.8977C34.1521 39.8977 34.9121 41.2445 37.1708 41.1938C39.4961 41.1574 40.9601 39.1658 42.3575 37.1287C44.0308 34.8147 44.7028 32.5358 44.7295 32.4188C44.6748 32.4006 40.2135 30.7405 40.1695 25.7186Z" fill="white"/>
@@ -232,7 +232,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
         <InfiniteScrollText
           items={scrollingTags}
           speed={25}
-          className="py-4"
+          className="py-6 lg:pt-20"
           itemClassName="text-gray-400 text-sm font-medium"
         />
       </div>

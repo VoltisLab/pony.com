@@ -97,7 +97,8 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <>
-      <nav className="relative w-full h-12 lg:h-16 overflow-hidden px-4 md-px-5 xl:px-16 bg-[url('/navbg.png')]">
+<nav className="relative w-full h-12 lg:h-16 overflow-hidden px-4 md:px-5 xl:px-16
+  bg-[url('/navbg.png')] bg-no-repeat bg-cover ">
         <div className="relative z-10 flex items-center justify-between h-full ">
           {/* Logo */}
           <div className="flex items-center">
