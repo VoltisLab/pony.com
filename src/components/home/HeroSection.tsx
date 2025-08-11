@@ -20,7 +20,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   onButtonClick,
 }) => {
   return (
-    <section className="relative w-full lg:h-screen h-[65vh] overflow-hidden md:mt-2">
+    <section className="relative w-full lg:h-screen h-[65vh] overflow-hidden ">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
