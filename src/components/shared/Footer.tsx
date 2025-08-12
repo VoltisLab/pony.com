@@ -56,7 +56,10 @@ const Footer = () => {
               {/* Language Selector */}
               <LanguageDropdown/>
               {/* App badges (PNG, scales with vw on lg+) */}
+              <div className='hidden lg:flex'>
+
               <AppStoreButtons/>
+              </div>
             </div>
           </div>
 
