@@ -20,11 +20,7 @@ export default function LanguageDropdown() {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Pick a random language when component mounts
-  useEffect(() => {
-    const randomLang = languages[Math.floor(Math.random() * languages.length)];
-    setSelectedLanguage(randomLang);
-  }, []);
+
 
   return (
     <div className="w-full hidden lg:flex max-w-sm lg:max-w-[28vw] xl:max-w-[29vw] mb-4 lg:mb-[1vw] relative">
@@ -56,7 +52,7 @@ export default function LanguageDropdown() {
           <span className="lg:text-[1.11vw]">
             <FaGlobeAfrica />
           </span>
-          <span className="text-xs lg:text-[1vw] text-center font-semibold">
+          <span className="text-xs lg:text-[0.8vw] w-fit text-center font-semibold">
             {selectedLanguage}
           </span>
         </div>
