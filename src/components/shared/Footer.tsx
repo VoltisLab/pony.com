@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FaGlobeAfrica } from 'react-icons/fa';
 import LanguageDropdown from './LanguageDropDown';
 import NewsletterField from './Subscribe';
+import AppStoreButtons from './Badge';
 
 const Footer = () => {
   return (
@@ -55,22 +56,7 @@ const Footer = () => {
               {/* Language Selector */}
               <LanguageDropdown/>
               {/* App badges (PNG, scales with vw on lg+) */}
-              <div className="w-full hidden lg:flex flex-row gap-3 lg:gap-[0.8vw] items-center justify-start">
-                <Image
-                  src="/apppay.png"
-                  alt="Download on the App Store"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto lg:h-[2.5vw]"
-                />
-                <Image
-                  src="/gplay.png"
-                  alt="Get it on Google Play"
-                  width={160}
-                  height={48}
-                  className="h-10 w-auto lg:h-[2.5vw]"
-                />
-              </div>
+              <AppStoreButtons/>
             </div>
           </div>
 

@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import InfiniteScrollText from '../shared/InfiniteScrollText';
 import { motion } from 'framer-motion';
+import AppStoreButtons from '../shared/Badge';
 
 interface DatingSectionProps {
   leftImage?: string;
@@ -88,69 +89,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
               </motion.p>
 
               {/* App Store Buttons — Desktop/Tablet */}
-              <motion.div
-                className="md:flex hidden flex-row gap-4 lg:gap-[1vw] justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                viewport={{ once: true }}
-              >
-                <a
-                  href="#"
-                  className="inline-block hover:opacity-80 transition-opacity"
-                >
-                  <Image
-                    src="/gplay.png"
-                    alt="Get it on Google Play"
-                    width={160}
-                    height={48}
-                    className="h-10 w-auto lg:h-[3vw]"
-                    priority
-                  />
-                </a>
-                <a
-                  href="#"
-                  className="inline-block hover:opacity-80 transition-opacity"
-                >
-                  <Image
-                    src="/apppay.png"
-                    alt="Download on the App Store"
-                    width={160}
-                    height={48}
-                    className="h-10 w-auto lg:h-[3vw]"
-                    priority
-                  />
-                </a>
-                
-              </motion.div>
-
-              {/* App Store Buttons — Mobile */}
-              <motion.div
-                className="flex md:hidden flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                viewport={{ once: true }}
-              >
-                <a href="#" className="inline-block hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/apppay.png"
-                    alt="Download on the App Store"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
-                </a>
-                <a href="#" className="inline-block hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/gplay.png"
-                    alt="Get it on Google Play"
-                    width={120}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
-                </a>
-              </motion.div>
+           <AppStoreButtons/>
             </div>
           </motion.div>
         </motion.div>
