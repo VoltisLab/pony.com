@@ -29,14 +29,14 @@ const Footer = () => {
               {/* Footer Links */}
               <div className="flex flex-row gap-6 lg:gap-16 font-semibold w-full md:justify-start justify-between">
                 <div className="flex flex-col gap-3">
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
+                  <a href="/privacy-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
+                  <a href="/terms" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
+                  <a href="/cookie-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
+                  <a href="/privacy-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
+                  <a href="/terms" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
+                  <a href="/cookie-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
                 </div>
               </div>
             </div>
