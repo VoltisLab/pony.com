@@ -60,7 +60,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
 
           {/* Right Content */}
           <motion.div
-            className="flex-1 bg-white flex items-end lg:h-[70vh]  justify-center px-8 md:px-16 xl:px-[4.2vw] pt-28 md:pt-0 lg:pb-[1.25vw] lg:rounded-l-[1.2vw]"
+            className="flex-1 bg-white flex items-end lg:h-[70vh]  justify-center px-8 md:px-16 xl:px-[4.2vw] pt-28 md:pt-0 pb-1 lg:pb-[1.25vw] lg:rounded-l-[1.2vw]"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

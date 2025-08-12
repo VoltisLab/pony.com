@@ -84,7 +84,7 @@ const TestimonialSection = () => {
         </div>
 
         {/* left rail (image + testimonial) anchored with viewport padding */}
-        <div className="relative z-10 flex items-end gap-[2vw] pl-[5vw] pr-[2vw]">
+        <div className="relative z-10 flex items-end gap-[1vw] pl-[5vw] pr-[2vw]">
           {/* left: image stack */}
           <div className="relative w-[22vw] h-[26vw] z-[100]">
             <AnimatePresence mode="wait">
