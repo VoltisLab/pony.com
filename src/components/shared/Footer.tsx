@@ -42,9 +42,9 @@ const Footer = () => {
             </div>
 
             {/* Right Section - Image and App Downloads */}
-            <div className="flex-1 flex flex-col items-center lg:items-end w-full md:max-w-[320px] lg:max-w-[16.7vw]">
+            <div className="flex-1 flex flex-col items-center lg:items-end w-full md:max-w-[320px] lg:max-w-fit">
               {/* Main Image */}
-              <div className="w-full h-[350px] lg:h-[18.23vw] lg:max-w-[26.7vw] rounded-sm lg:rounded-[1.2vw] mb-6 lg:mb-[1.25vw] relative overflow-hidden">
+              <div className="w-full h-[350px] lg:h-[25.23vw] lg:w-[20vw]  lg:aspect-[3/4] rounded-sm lg:rounded-[1.2vw] mb-6 lg:mb-[1vw] relative overflow-hidden">
                 <Image
                   src="/footer.png"
                   alt="Couple sitting on dock with mountain lake background"
@@ -62,14 +62,14 @@ const Footer = () => {
                   alt="Download on the App Store"
                   width={160}
                   height={48}
-                  className="h-10 w-auto lg:h-[2.2vw]"
+                  className="h-10 w-auto lg:h-[2.5vw]"
                 />
                 <Image
                   src="/gplay.png"
                   alt="Get it on Google Play"
                   width={160}
                   height={48}
-                  className="h-10 w-auto lg:h-[2.2vw]"
+                  className="h-10 w-auto lg:h-[2.5vw]"
                 />
               </div>
             </div>

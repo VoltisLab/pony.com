@@ -59,7 +59,7 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
 
                   <motion.p
-                    className="text-white text-[10px] lg:text-[1.6vw] md:font-semibold leading-relaxed lg:leading-relaxed max-w-sm lg:max-w-[34vw]"
+                    className="text-white text-[10px] lg:text-[1.6vw]  leading-relaxed lg:leading-relaxed max-w-sm lg:max-w-[30vw]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
