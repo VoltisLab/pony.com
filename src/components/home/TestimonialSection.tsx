@@ -78,7 +78,7 @@ const TestimonialSection = () => {
         {/* right background map fills the right half */}
         <div className="absolute right-0 top-0 h-full w-[50vw] z-0">
           <div className="relative w-full h-full rounded-[1.2vw]">
-            <Image src="/map.png" alt="World map" fill className="object-cover" />
+            <Image src="/map.png" alt="World map" fill className="object-contain" />
           </div>
         </div>
 

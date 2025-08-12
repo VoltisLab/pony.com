@@ -40,16 +40,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           relative z-10 flex items-center justify-center gap-20
           h-full mt-0 sm:mt-20 md:mt-24
           lg:mt-[6vw] lg:gap-[6vw] lg:px-[6vw]
-          px-4 sm:px-6 lg:px-8
+          px-4 sm:px-6 
         "
       >
         <div className="text-center max-w-[92vw]">
           <motion.h1
             className="
               text-2xl sm:text-4xl md:text-6xl
-              lg:text-[6vw] xl:text-[5.5vw] 2xl:text-[5vw]
+              lg:text-[5.7vw] 
               lg:leading-[1.1]
-              font-bold text-white mb-0 sm:mb-6 leading-tight px-2
+              font-bold text-white mb-0 sm:mb-6 tracking-wide leading-tight px-2
             "
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               className="
                 shadow-2xl hover:shadow-3xl transform hover:scale-105
                 text-sm sm:text-base md:text-lg
-                lg:text-[1.05vw] lg:px-[2.2vw] lg:py-[0.9vw] lg:rounded-[0.9vw]
+                lg:text-[1.05vw] lg:px-[2.5vw] lg:py-[0.9vw] rounded-full
               "
             >
               {buttonText}

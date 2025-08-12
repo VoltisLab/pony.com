@@ -41,7 +41,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
           >
             <div className="w-full flex flex-col items-center lg:items-start">
               <motion.h2
-                className="text-2xl w-[70vw] md:w-full sm:text-3xl md:text-4xl lg:text-[3.8vw] lg:mb-[1.4vw] font-bold leading-[160%]"
+                className="text-2xl w-[70vw] md:w-full sm:text-3xl md:text-4xl lg:text-[3.8vw] lg:mb-[1.4vw] font-semibold leading-[160%]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
