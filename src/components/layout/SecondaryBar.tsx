@@ -16,27 +16,30 @@ interface SecondaryBarProps {
 const SecondaryBar: React.FC<SecondaryBarProps> = ({
   downloadText = 'Download Now',
   appStoreButtons = [
-    
-    { 
-      type: 'apple', 
+    {
+      type: 'apple',
       href: '#',
       imageSrc: '/apppay.png',
-      alt: 'Download on the App Store'
+      alt: 'Download on the App Store',
     },
-    { 
-      type: 'google', 
+    {
+      type: 'google',
       href: '#',
       imageSrc: '/gplay.png',
-      alt: 'Get it on Google Play'
+      alt: 'Get it on Google Play',
     },
   ],
 }) => {
   return (
-    <div className="bg-white border-b border-gray-200 py-1 lg:py-3">
-      <div className="px-2 md:px-8 flex items-center justify-end">
-        <div className="flex items-center space-x-4">
-          <span className="text-gray-700 hidden lg:block text-xs md:text-sm hover:underline cursor-pointer font-bold">{downloadText}</span>
-          <div className="md:flex items-center space-x-2 hidden">
+    <div className="bg-white border-b border-gray-200 py-1 lg:py-[0.8vw]">
+      <div className="px-2 md:px-8 lg:px-[2vw] flex items-center justify-end">
+        <div className="flex items-center space-x-4 lg:space-x-[1vw]">
+          <span className="text-gray-700 hidden lg:block text-xs md:text-sm lg:text-[0.9vw] hover:underline cursor-pointer font-bold">
+            {downloadText}
+          </span>
+
+          {/* Desktop badges */}
+          <div className="md:flex hidden items-center space-x-2 lg:space-x-[0.6vw]">
             {appStoreButtons.map((button, index) => (
               <a
                 key={index}
@@ -45,15 +48,19 @@ const SecondaryBar: React.FC<SecondaryBarProps> = ({
               >
                 <Image
                   src={button.imageSrc || `/${button.type}-store-badge.png`}
-                  alt={button.alt || `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`}
-                  width={135}
-                  height={40}
-                  className="h-10 w-auto"
+                  alt={
+                    button.alt ||
+                    `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`
+                  }
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto lg:h-[2.2vw]"
                 />
               </a>
             ))}
           </div>
 
+          {/* Mobile badges */}
           <div className="flex md:hidden items-center space-x-2">
             {appStoreButtons.map((button, index) => (
               <a
@@ -63,10 +70,13 @@ const SecondaryBar: React.FC<SecondaryBarProps> = ({
               >
                 <Image
                   src={button.imageSrc || `/${button.type}-store-badge.png`}
-                  alt={button.alt || `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`}
+                  alt={
+                    button.alt ||
+                    `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`
+                  }
                   width={100}
                   height={35}
-                  className=""
+                  className="h-9 w-auto"
                 />
               </a>
             ))}
