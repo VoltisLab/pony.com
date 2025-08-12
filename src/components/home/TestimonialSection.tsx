@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
 
 const testimonials = [
   { id: 1, text: `I was matched with someone who loves Formula 1 and 70s rock. We went to a Queen's tribute concert for our first date. Pony makes it easy to skip the awkward small talk and jump into stuff we both care about.` },
@@ -28,7 +29,7 @@ const TestimonialSection = () => {
       {/* MOBILE/TABLET — unchanged */}
       <div className="xl:hidden px-0 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-8">
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center ">
             <div className="relative w-[150px] aspect-square rounded-2xl overflow-hidden border-2 border-red-500">
               <Image src="/cafe.png" alt="Couple at cafe" fill className="object-cover" />
             </div>
@@ -85,7 +86,7 @@ const TestimonialSection = () => {
         {/* left rail (image + testimonial) anchored with viewport padding */}
         <div className="relative z-10 flex items-end gap-[2vw] pl-[5vw] pr-[2vw]">
           {/* left: image stack */}
-          <div className="relative w-[22vw] h-[26vw]">
+          <div className="relative w-[22vw] h-[26vw] z-[100]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`image-${currentIndex}`}
@@ -93,7 +94,7 @@ const TestimonialSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="w-full h-full relative rounded-[1.2vw] overflow-hidden"
+                className="w-full h-full relative rounded-[1.2vw] overflow-hidden border-2 border-red-500"
               >
                 <Image src="/cafe.png" alt="Couple at cafe" fill className="object-cover" />
               </motion.div>
@@ -108,7 +109,7 @@ const TestimonialSection = () => {
           </div>
 
           {/* middle: fixed vw width so it never gets skinny or drift center */}
-          <div className="flex-0 w-[30vw] min-w-[28vw]">
+          <div className="flex-0 w-[43vw] min-w-[33vw] ">
             <div className="relative mb-[0.8vw]">
               <AnimatePresence mode="wait">
                 <motion.h2
@@ -117,40 +118,49 @@ const TestimonialSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
-                  className="text-[2.2vw] font-semibold text-white ml-[2vw]"
+                  className="text-[3.5vw] font-semibold text-white ml-[2vw]"
                 >
-                  PONY-<span className="text-[#ED1B24] font-medium text-[2.2vw]">tale</span>
+                  PONY-<span className="text-[#ED1B24] font-medium text-[3.5vw]">tale</span>
                 </motion.h2>
               </AnimatePresence>
 
-              <h2 className="text-[2.2vw] font-semibold text-white absolute -top-[0.6vw] left-[2.6vw] opacity-10 -z-10">
-                PONY-<span className="font-medium text-[2.2vw]">tale</span>
+              <h2 className="text-[3.5vw] font-semibold text-white absolute -top-[0.6vw] left-[2.6vw] opacity-10 -z-10">
+                PONY-<span className="font-medium text-[3.5vw]">tale</span>
               </h2>
             </div>
 
             <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 50, scale: 0.95 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -50, scale: 0.95 }}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="bg-white rounded-[1.2vw] p-[1.2vw] shadow-2xl border border-[#ED1B24]"
-              >
-                <div className="flex items-start gap-[0.6vw]">
-                  <span className="text-red-500 text-[1.8vw] font-bold flex-shrink-0">&quot;</span>
-                  <p className="text-black text-[1.1vw] leading-[1.6]">
-                    {testimonials[currentIndex].text.split('skip the awkward').map((part, i, arr) => (
-                      <React.Fragment key={i}>
-                        {part}
-                        {i < arr.length - 1 && <span className="text-red-500 font-semibold">skip the awkward</span>}
-                      </React.Fragment>
-                    ))}
-                  </p>
-                  <span className="text-red-500 text-[1.8vw] font-bold flex-shrink-0">&quot;</span>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+  <motion.div
+    key={currentIndex}
+    initial={{ opacity: 0, x: 50, scale: 0.95 }}
+    animate={{ opacity: 1, x: 0, scale: 1 }}
+    exit={{ opacity: 0, x: -50, scale: 0.95 }}
+    transition={{ duration: 0.5, ease: 'easeInOut' }}
+    className="bg-white rounded-r-[0.8vw] p-[1.2vw] w-full h-[12vw] shadow-2xl border border-[#ED1B24]"
+  >
+    <div className="flex items-start gap-[0.6vw]">
+      <p className="text-black text-[1.3vw] leading-[1.6]">
+        <span className="text-red-500 text-[1.3vw] font-bold align-[-0.2em] inline-block mr-[0.3vw]" aria-hidden>
+          <BiSolidQuoteAltLeft />
+        </span>
+
+        {testimonials[currentIndex].text.split('skip the awkward').map((part, i, arr) => (
+          <React.Fragment key={i}>
+            {part}
+            {i < arr.length - 1 && (
+              <span className="text-red-500 font-semibold">skip the awkward</span>
+            )}
+          </React.Fragment>
+        ))}
+
+        <span className="text-red-500 text-[1.3vw] font-bold align-[-0.2em] inline-block ml-[0.6vw]" aria-hidden>
+          <BiSolidQuoteAltRight />
+        </span>
+      </p>
+    </div>
+  </motion.div>
+</AnimatePresence>
+
 
             <div className="flex gap-[0.6vw] mt-[1.2vw] justify-center">
               {testimonials.map((_, i) => (
