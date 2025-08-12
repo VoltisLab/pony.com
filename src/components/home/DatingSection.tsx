@@ -33,7 +33,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
     <section className="py-0 pt-2 lg:pt-8 sm:py-12 overflow-hidden bg-black">
       <div className="max-w-screen mx-auto">
         <motion.div
-          className="flex flex-col-reverse xl:flex-row gap-2 lg:h-[70vh] "
+          className="flex flex-col-reverse lg:flex-row gap-2 lg:gap-[1.5vw] lg:h-[70vh] "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -68,7 +68,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
           >
             <div className="max-w-2xl lg:max-w-[46vw] text-center flex flex-col items-center justify-end">
               <motion.h2
-                className="text-2xl sm:text-3xl w-[120px] md:w-fit md:text-4xl lg:text-[2.5vw] font-bold mb-6 sm:mb-8"
+                className="text-2xl sm:text-3xl w-[120px] md:w-fit md:text-4xl lg:text-[3.5vw] font-bold mb-6 sm:mb-8 lg:mb-[1vw]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -78,7 +78,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
               </motion.h2>
 
               <motion.p
-                className="text-sm lg:text-[1.25vw] leading-relaxed mb-1 sm:mb-10"
+                className="text-sm lg:text-[1.25vw] font-medium leading-relaxed mb-1 sm:mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -89,7 +89,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
 
               {/* App Store Buttons — Desktop/Tablet */}
               <motion.div
-                className="md:flex hidden flex-row gap-4 justify-center items-center"
+                className="md:flex hidden flex-row gap-4 lg:gap-[1vw] justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
@@ -100,11 +100,11 @@ const DatingSection: React.FC<DatingSectionProps> = ({
                   className="inline-block hover:opacity-80 transition-opacity"
                 >
                   <Image
-                    src="/apppay.png"
-                    alt="Download on the App Store"
+                    src="/gplay.png"
+                    alt="Get it on Google Play"
                     width={160}
                     height={48}
-                    className="h-10 w-auto lg:h-[2.2vw]"
+                    className="h-10 w-auto lg:h-[3vw]"
                     priority
                   />
                 </a>
@@ -113,14 +113,15 @@ const DatingSection: React.FC<DatingSectionProps> = ({
                   className="inline-block hover:opacity-80 transition-opacity"
                 >
                   <Image
-                    src="/gplay.png"
-                    alt="Get it on Google Play"
+                    src="/apppay.png"
+                    alt="Download on the App Store"
                     width={160}
                     height={48}
-                    className="h-10 w-auto lg:h-[2.2vw]"
+                    className="h-10 w-auto lg:h-[3vw]"
                     priority
                   />
                 </a>
+                
               </motion.div>
 
               {/* App Store Buttons — Mobile */}
@@ -160,7 +161,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
         <InfiniteScrollText
           items={scrollingTags}
           speed={25}
-          className="py-6"
+          className="py-6 lg:py-[1vw]"
           itemClassName="text-gray-400 text-sm font-medium"
         />
       </div>

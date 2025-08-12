@@ -17,7 +17,7 @@ const ConnectionSection = () => {
         <InfiniteScrollText
           items={scrollingTags}
           speed={20}
-          className="lg:py-4"
+          className="py-6 lg:py-[1vw]"
           itemClassName="text-gray-500 text-sm font-medium"
         />
       </div>
@@ -33,7 +33,7 @@ const ConnectionSection = () => {
         >
           {/* Left: text (≈70%) */}
           <motion.div
-            className="lg:basis-[70%] relative flex bg-white h-[50vh] lg:h-full items-end justify-center lg:justify-start px-4 sm:px-8 md:px-12 lg:px-[5vw]"
+            className="lg:basis-[65%] relative flex bg-white h-[50vh] lg:h-full items-end justify-center lg:justify-start px-4 sm:px-8 md:px-12 lg:px-[5vw]"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -41,7 +41,7 @@ const ConnectionSection = () => {
           >
             <div className="max-w-full w-full lg:w-fit mb-5 md:mb-12 lg:mb-[2vw] flex flex-col items-center justify-center lg:items-start">
               <motion.h1
-                className="text-xl w-[70vw] lg:w-[60%] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-[2.8vw] font-semibold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
+                className="text-xl w-[70vw] lg:w-[100%] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-[3.5vw] font-semibold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -51,7 +51,7 @@ const ConnectionSection = () => {
               </motion.h1>
 
               <motion.p
-                className="text-[10px] sm:text-lg md:text-xl lg:text-[1.15vw] text-black leading-relaxed"
+                className="text-[10px] sm:text-lg md:text-xl lg:text-[1.6vw] text-black leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -65,7 +65,7 @@ const ConnectionSection = () => {
 
           {/* Right: image (≈30%) */}
           <motion.div
-            className="lg:basis-[30%] relative h-[50vh] lg:h-full"
+            className="lg:basis-[35%] relative h-[50vh] lg:h-full"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
