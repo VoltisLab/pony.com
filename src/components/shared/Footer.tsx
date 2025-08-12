@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { FaGlobeAfrica } from 'react-icons/fa';
 import LanguageDropdown from './LanguageDropDown';
+import NewsletterField from './Subscribe';
 
 const Footer = () => {
   return (
@@ -22,9 +23,7 @@ const Footer = () => {
               </h2>
 
               {/* Newsletter Subscription */}
-              <div className="mb-2 lg:mb-[2.5vw] w-[70vw] lg:w-full">
-                <input type='text' className="justify-start lg:justify-center flex w-full md:w-[210px] lg:w-fit px-3 lg:px-[2vw] p-1.5 lg:p-[0.7vw] border rounded-full text-black text-sm lg:text-[1vw] hover:bg-gray-50 transition-colors" placeholder='Subscribe to our Newsletter' />
-              </div>
+              <NewsletterField/>
 
               {/* Footer Links (desktop/tablet) */}
               <div className="md:flex hidden flex-row gap-6 lg:gap-[3.3vw] lg:font-semibold w-full md:justify-start justify-between mt-14 lg:mt-0">
