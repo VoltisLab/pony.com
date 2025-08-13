@@ -3,6 +3,7 @@ import Image from 'next/image';
 import LanguageDropdown from './LanguageDropDown';
 import NewsletterField from './Subscribe';
 import AppStoreButtons from './Badge';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -27,15 +28,21 @@ const Footer = () => {
 
               {/* Footer Links (desktop/tablet) */}
               <div className="md:flex hidden flex-row gap-6 lg:gap-[3.3vw] lg:font-semibold w-full md:justify-start justify-between mt-14 lg:mt-0">
-                <div className="flex flex-col gap-3">
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
+                 <div className="flex flex-col gap-3">
+                  <Link href="/privacy-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</Link>
+                  <Link href="/terms" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</Link>
+                  <Link href="/cookie-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</Link>
+                  <Link href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</Link>
+                  <Link href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</Link>
+                  <Link href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</Link>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</a>
-                  <a href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</a>
+                  <Link href="/privacy-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</Link>
+                  <Link href="/terms" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</Link>
+                  <Link href="/cookie-policy" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</Link>
+                  <Link href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Privacy Policy</Link>
+                  <Link href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Terms of Use</Link>
+                  <Link href="#" className="text-black text-sm hover:text-gray-600 transition-colors">Cookie Policy</Link>
                 </div>
               </div>
             </div>
