@@ -35,7 +35,6 @@ const Navbar: React.FC<NavbarProps> = ({
 
     if (isMobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
-      // Prevent body scrolling when menu is open
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -50,83 +49,65 @@ const Navbar: React.FC<NavbarProps> = ({
   // Animation variants
   const overlayVariants: Variants = {
     hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { duration: 0.3 }
-    },
-    exit: { 
-      opacity: 0,
-      transition: { duration: 0.3, delay: 0.1 }
-    }
+    visible: { opacity: 1, transition: { duration: 0.3 } },
+    exit: { opacity: 0, transition: { duration: 0.3, delay: 0.1 } }
   };
 
   const menuVariants: Variants = {
-    hidden: { 
-      x: '100%',
-      opacity: 0
-    },
-    visible: { 
+    hidden: { x: '100%', opacity: 0 },
+    visible: {
       x: 0,
       opacity: 1,
-      transition: { 
-        type: 'spring',
-        stiffness: 300,
-        damping: 30,
-        duration: 0.4
-      }
+      transition: { type: 'spring', stiffness: 300, damping: 30, duration: 0.4 }
     },
-    exit: { 
+    exit: {
       x: '100%',
       opacity: 0,
-      transition: { 
-        type: 'spring',
-        stiffness: 300,
-        damping: 30,
-        duration: 0.3
-      }
+      transition: { type: 'spring', stiffness: 300, damping: 30, duration: 0.3 }
     }
   };
 
   const linkVariants: Variants = {
     hidden: { x: 20, opacity: 0 },
-    visible: { 
-      x: 0,
-      opacity: 1
-    }
+    visible: { x: 0, opacity: 1 }
   };
 
   return (
     <>
-      <nav className="relative w-full h-16 overflow-hidden px-4 md-px-5 xl:px-16 bg-[url('/navbg.png')]">
-        <div className="relative z-10 flex items-center justify-between h-full ">
+      <nav
+        className="relative w-full h-12 lg:h-[4.4vw] overflow-hidden px-4 md:px-5 xl:px-16
+  bg-[url('/navbg.png')] bg-no-repeat bg-cover "
+      >
+        <div className="relative z-10 flex items-center justify-between h-full">
           {/* Logo */}
           <div className="flex items-center">
             <Image
               src={logo}
               alt="PONY Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
+              width={150}
+              height={50}
+              className="h-8 w-auto lg:h-[3vw]"
               priority
             />
           </div>
-          
+
           {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 lg:space-x-[1.667vw]">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-white hover:text-gray-300 transition-colors duration-200 text-sm font-medium"
+                className="text-white hover:text-gray-300 transition-colors duration-200
+                           text-sm lg:text-[1vw] font-medium"
               >
                 {link.label}
               </a>
             ))}
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <motion.button 
+            <motion.button
               id="menu-button"
               onClick={() => setIsMobileMenuOpen(true)}
               className="text-white hover:text-gray-300 transition-colors p-2"
@@ -181,7 +162,7 @@ const Navbar: React.FC<NavbarProps> = ({
               {/* Menu Content */}
               <div className="px-6 py-4">
                 {/* Logo */}
-                <motion.div 
+                <motion.div
                   className="mb-8 pb-6 border-b border-gray-700"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -204,11 +185,7 @@ const Navbar: React.FC<NavbarProps> = ({
                       variants={linkVariants}
                       initial="hidden"
                       animate="visible"
-                      transition={{
-                        delay: 0.1 + index * 0.1,
-                        duration: 0.3,
-                        ease: "easeOut"
-                      }}
+                      transition={{ delay: 0.1 + index * 0.1, duration: 0.3, ease: 'easeOut' }}
                     >
                       <motion.a
                         href={link.href}
@@ -224,7 +201,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 </nav>
 
                 {/* Optional: Additional content or social links */}
-                <motion.div 
+                <motion.div
                   className="mt-12 pt-8 border-t border-gray-700"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -233,7 +210,6 @@ const Navbar: React.FC<NavbarProps> = ({
                   <p className="text-gray-400 text-sm">
                     Connect with us
                   </p>
-                  {/* Add social media links here if needed */}
                 </motion.div>
               </div>
             </motion.div>

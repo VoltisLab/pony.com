@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import AppStoreButtons from '../shared/Badge';
 
 interface AppStoreButton {
   type: 'google' | 'apple';
@@ -15,61 +15,18 @@ interface SecondaryBarProps {
 
 const SecondaryBar: React.FC<SecondaryBarProps> = ({
   downloadText = 'Download Now',
-  appStoreButtons = [
-    { 
-      type: 'google', 
-      href: '#',
-      imageSrc: '/gplay.png',
-      alt: 'Get it on Google Play'
-    },
-    { 
-      type: 'apple', 
-      href: '#',
-      imageSrc: '/apppay.png',
-      alt: 'Download on the App Store'
-    },
-  ],
+
 }) => {
   return (
-    <div className="bg-white border-b border-gray-200 py-3">
-      <div className="px-2 md:px-8 flex items-center justify-end">
-        <div className="flex items-center space-x-4">
-          <span className="text-gray-700 text-xs md:text-sm hover:underline cursor-pointer font-bold">{downloadText}</span>
-          <div className="md:flex items-center space-x-2 hidden">
-            {appStoreButtons.map((button, index) => (
-              <a
-                key={index}
-                href={button.href}
-                className="inline-block hover:opacity-80 transition-opacity duration-200"
-              >
-                <Image
-                  src={button.imageSrc || `/${button.type}-store-badge.png`}
-                  alt={button.alt || `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`}
-                  width={135}
-                  height={40}
-                  className="h-10 w-auto"
-                />
-              </a>
-            ))}
-          </div>
+    <div className="bg-white border-b border-gray-200 py-1 lg:py-[0.8vw]">
+      <div className="px-2 md:px-8 lg:px-[2vw] flex items-center justify-end">
+        <div className="flex items-center space-x-4 lg:space-x-[2vw]">
+          <span className="text-gray-700 hidden  lg:block text-xs md:text-sm lg:text-[1vw] hover:underline cursor-pointer ">
+            {downloadText}
+          </span>
 
-          <div className="flex md:hidden items-center space-x-2">
-            {appStoreButtons.map((button, index) => (
-              <a
-                key={index}
-                href={button.href}
-                className="inline-block hover:opacity-80 transition-opacity duration-200"
-              >
-                <Image
-                  src={button.imageSrc || `/${button.type}-store-badge.png`}
-                  alt={button.alt || `${button.type === 'google' ? 'Google Play' : 'App Store'} badge`}
-                  width={100}
-                  height={35}
-                  className=""
-                />
-              </a>
-            ))}
-          </div>
+          {/* Desktop badges */}
+         <AppStoreButtons/>
         </div>
       </div>
     </div>
