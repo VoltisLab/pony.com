@@ -99,7 +99,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
       <div className="max-w-full hidden md:flex mx-auto xl:mt-0 mt-10">
         <InfiniteScrollText
           items={scrollingTags}
-          speed={25}
+          speed={45}
           className="py-6 lg:py-[1vw]"
           itemClassName="text-gray-400 text-sm font-medium"
         />

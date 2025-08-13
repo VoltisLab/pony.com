@@ -16,7 +16,7 @@ const ConnectionSection = () => {
       <div>
         <InfiniteScrollText
           items={scrollingTags}
-          speed={20}
+          speed={45}
           className="py-6 lg:py-[1vw]"
           itemClassName="text-gray-500 text-sm font-medium"
         />

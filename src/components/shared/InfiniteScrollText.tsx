@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Dot } from 'lucide-react';
 
 interface InfiniteScrollTextProps {
@@ -12,39 +11,52 @@ interface InfiniteScrollTextProps {
 
 const InfiniteScrollText: React.FC<InfiniteScrollTextProps> = ({
   items,
-  speed = 3,
+  speed,// Duration in seconds for one complete cycle
   className = '',
-//   itemClassName = '',
+  itemClassName = '',
 }) => {
-  const duplicatedItems = [...items, ...items, ...items];
+  // Double the items for seamless loop
+  const doubledItems = [...items, ...items];
 
   return (
-    <div className={`overflow-hidden whitespace-nowrap  ${className}`}>
-      <motion.div
-        className="flex"
-        animate={{
-          x: [0, -100 * (items.length / 3) + '%'],
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 90,
-            ease: "linear",
-          },
-        }}
-      >
-        {duplicatedItems.map((item, index) => (
-          <div key={index} className='flex items-center'>
-            <Dot color='#878484' className='h-5 w-5 lg:h-[1.5vw] lg:w-[1.5vw]' size={25}/>
-            <span className={`inline-block mx-4 text-[#878484] text-xs lg:text-[1.6vw]`}>
-            {item}
-            </span>
-          </div>
+    <>
+      <style>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
         
-        ))}
-      </motion.div>
-    </div>
+        .scroll-container {
+          animation: scroll-left ${speed}s linear infinite;
+          display: flex;
+          width: max-content;
+        }
+      `}</style>
+      
+      <div className={`overflow-hidden whitespace-nowrap ${className}`}>
+        <div className="scroll-container">
+          {doubledItems.map((item, index) => (
+            <div 
+              key={`${item}-${index}`} 
+              className={`flex items-center flex-shrink-0 ${itemClassName}`}
+            >
+              <Dot 
+                color='#878484' 
+                className='h-5 w-5 lg:h-[1.5vw] lg:w-[1.5vw] flex-shrink-0' 
+                size={25}
+              />
+              <span className="inline-block mx-4 text-[#878484] text-xs lg:text-[1.6vw] flex-shrink-0 whitespace-nowrap">
+                {item}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
