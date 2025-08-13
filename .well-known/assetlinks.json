@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.voltislabs.datify.app",
+    "sha256_cert_fingerprints":
+    ["AB:8C:7A:D1:67:E4:67:80:FB:91:66:44:80:B0:D5:4F:45:65:5F:D6:A4:83:55:99:F3:C0:66:C2:9E:D2:36:DD"]
+  }
+}]
