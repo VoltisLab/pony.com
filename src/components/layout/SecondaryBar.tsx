@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import AppStoreButtons from '../shared/Badge';
 
 interface AppStoreButton {
