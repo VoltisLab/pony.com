@@ -29,7 +29,7 @@ const InfiniteScrollText: React.FC<InfiniteScrollTextProps> = ({
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 90,
+            duration: 60,
             ease: "linear",
           },
         }}
@@ -37,7 +37,7 @@ const InfiniteScrollText: React.FC<InfiniteScrollTextProps> = ({
         {duplicatedItems.map((item, index) => (
           <div key={index} className='flex items-center'>
             <Dot color='#878484' className='h-5 w-5 lg:h-[1.5vw] lg:w-[1.5vw]' size={25}/>
-            <span className={`inline-block mx-4 text-[#878484] text-xs lg:text-[1.6vw]`}>
+            <span className={`inline-block mx-4 text-[#737272] text-xs lg:text-[1vw]`}>
             {item}
             </span>
           </div>
