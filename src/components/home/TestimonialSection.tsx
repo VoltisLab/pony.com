@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
+// import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
 
 const testimonials = [
   { id: 1, text: `I was matched with someone who loves Formula 1 and 70s rock. We went to a Queen's tribute concert for our first date. Pony makes it easy to skip the awkward small talk and jump into stuff we both care about.` },
@@ -141,7 +141,7 @@ const TestimonialSection = () => {
     <div className="flex items-start gap-[0.6vw]">
       <p className="text-black text-[1.3vw] leading-[1.6]">
         <span className="text-red-500 text-[1.3vw] font-bold align-[-0.2em] inline-block mr-[0.3vw]" aria-hidden>
-          <BiSolidQuoteAltLeft />
+          {/* <BiSolidQuoteAltLeft /> */}
         </span>
 
         {testimonials[currentIndex].text.split('skip the awkward').map((part, i, arr) => (
@@ -154,7 +154,7 @@ const TestimonialSection = () => {
         ))}
 
         <span className="text-red-500 text-[1.3vw] font-bold align-[-0.2em] inline-block ml-[0.6vw]" aria-hidden>
-          <BiSolidQuoteAltRight />
+          {/* <BiSolidQuoteAltRight /> */}
         </span>
       </p>
     </div>
