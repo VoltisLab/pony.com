@@ -39,33 +39,39 @@ const AwkwardToEffortlessSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent lg:from-black/70 lg:via-black/40" />
 
               {/* Text Content Overlay */}
-              <div className="absolute inset-0 flex items-end mb-5 lg:mb-[1.042vw]">
+              <div className="absolute inset-0 flex items-end mb-5 lg:mb-[1.042vw] ">
                 <motion.div
-                  className="pl-5 pr-4 lg:pl-[1.042vw] lg:pr-[1.667vw] max-w-1/2 "
+                  className="pl-5 pr-4 lg:pl-[1.042vw] lg:pr-[1.667vw]"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
                   <motion.h2
-                    className="text-lg lg:text-[3.5vw] 2xl:text-[1.8vw] font-semibold text-white leading-[1.1] mb-4 lg:mb-[1.042vw]"
+                    className="text-lg sm:text-xl md:text-2xl lg:text-[2.8vw] xl:text-[2.4vw] 2xl:text-[2.0vw] 3xl:text-[1.8vw] font-semibold text-white leading-[1.1] mb-4 lg:mb-[1.042vw]  lg:max-w-none"
+                    style={{
+                      fontSize: 'clamp(1.125rem, 2.4vw, 3.5rem)'
+                    }}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
                     viewport={{ once: true }}
                   >
                     From Awkward to<br />
-                    <span className="text-white">Effortless.</span>
+                    Effortless.
                   </motion.h2>
 
                   <motion.p
-                    className="text-white text-[10px] lg:text-[1.6vw] 2xl:text-[1.4vw] leading-relaxed lg:leading-relaxed max-w-2/3"
+                    className="text-white text-[10px] sm:text-xs md:text-sm lg:text-[1.2vw] xl:text-[1.0vw] 2xl:text-[0.9vw] 3xl:text-[0.8vw] leading-relaxed  lg:max-w-none"
+                    style={{
+                      fontSize: 'clamp(0.625rem, 1.0vw, 1.2rem)'
+                    }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
                     viewport={{ once: true }}
                   >
-                    We&apos;re here to break the ice, build confidence, and help you skip the weird small talk. PONY helps you start strong, with shared interests, better prompts, and zero pressure.
+                    We&apos;re here to break the ice, build confidence, and help you  skip  <br />the weird small talk. PONY helps you start strong, with shared <br />interests, better prompts, and zero pressure.
                   </motion.p>
                 </motion.div>
               </div>
