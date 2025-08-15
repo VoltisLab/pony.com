@@ -41,14 +41,14 @@ const AwkwardToEffortlessSection = () => {
               {/* Text Content Overlay */}
               <div className="absolute inset-0 flex items-end mb-5 lg:mb-[1.042vw]">
                 <motion.div
-                  className="pl-5 pr-4 lg:pl-[1.042vw] lg:pr-[1.667vw] max-w-md lg:max-w-[40.667vw] "
+                  className="pl-5 pr-4 lg:pl-[1.042vw] lg:pr-[1.667vw] max-w-1/2 "
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
                   <motion.h2
-                    className="text-lg lg:text-[3.5vw]   font-semibold text-white leading-[1.1] mb-4 lg:mb-[1.042vw]"
+                    className="text-lg lg:text-[3.5vw] 2xl:text-[1.8vw] font-semibold text-white leading-[1.1] mb-4 lg:mb-[1.042vw]"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -59,7 +59,7 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
 
                   <motion.p
-                    className="text-white text-[10px] lg:text-[1.6vw]  leading-relaxed lg:leading-relaxed max-w-sm lg:max-w-[30vw]"
+                    className="text-white text-[10px] lg:text-[1.6vw] 2xl:text-[1.4vw] leading-relaxed lg:leading-relaxed max-w-2/3"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}

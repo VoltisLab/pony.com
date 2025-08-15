@@ -7,7 +7,7 @@ import AwkwardToEffortlessSection from "@/components/home/AwkwardToEffortlessSec
 
 export default function Home() {
   return (
-    <div className="w-full mx-auto overflow-x-hidden">
+    <div className="w-full overflow-x-hidden">
      <HeroSection />
      <DatingSection />
      <VibeSection />

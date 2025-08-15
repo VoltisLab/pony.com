@@ -36,7 +36,7 @@ const AppStoreButtons: React.FC = () => {
               alt={b.alt}
               width={160}
               height={48}
-              className="h-10 w-auto lg:h-[3vw]"
+              className="h-10 w-auto lg:h-[3vw] 2xl:h-[1.5vw]"
               priority={false}
             />
           </a>
