@@ -72,11 +72,11 @@ const Footer = () => {
               <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Terms of Use</a>
               <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Cookie Policy</a>
             </div>
-            <div className="flex flex-col gap-3 mr-20">
+            {/* <div className="flex flex-col gap-3 mr-20">
               <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Privacy Policy</a>
               <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Terms of Use</a>
               <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Cookie Policy</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
