@@ -90,8 +90,8 @@ const Navbar: React.FC<NavbarProps> = ({
               className="h-8 w-auto lg:h-[3vw]"
               priority
             /> */}
-         <LottiePlayer/>
             <p className='sf-font'>PONY</p> 
+         <LottiePlayer/>
           </div>
 
           {/* Navigation Links - Desktop */}

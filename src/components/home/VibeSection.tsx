@@ -64,7 +64,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
 
           {/* Right images */}
           <motion.div
-            className="relative lg:w-[60vw] xl:w-[70vw]"
+            className="relative w-full lg:w-[60vw] xl:w-[70vw]"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
