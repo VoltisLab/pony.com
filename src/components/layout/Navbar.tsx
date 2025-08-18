@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({
       >
         <div className="relative z-10 flex items-center justify-between h-full">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center sf-font text-white font-medium text-xl">
             {/* <Image
               src={logo}
               alt="PONY Logo"
@@ -90,7 +90,8 @@ const Navbar: React.FC<NavbarProps> = ({
               className="h-8 w-auto lg:h-[3vw]"
               priority
             /> */}
-            <LottiePlayer/>
+         <LottiePlayer/>
+            <p className='sf-font'>PONY</p> 
           </div>
 
           {/* Navigation Links - Desktop */}
