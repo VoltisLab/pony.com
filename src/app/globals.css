@@ -68,7 +68,9 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
+.sf-font {
+  font-family: "SF Pro Display", sans-serif;
+}
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
