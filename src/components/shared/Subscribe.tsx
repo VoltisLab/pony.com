@@ -31,7 +31,7 @@ export function NewsletterInline() {
             value={value}
             onChange={(e) => setValue(e.target.value)}
             placeholder="Subscribe to our Newsletter"
-            className="w-full md:max-w-[250px] lg:max-w-[250px] xl:max-w-[250px] 2xl:max-w-[250px] px-5 bg-transparent placeholder:text-[#BCBCBC] outline-none text-white 2xl:text-lg"
+            className="w-full md:max-w-[220px] text-center 2xl:max-w-[250px] bg-transparent placeholder:text-[#BCBCBC] outline-none text-white 2xl:text-lg"
           />
         </form>
         
