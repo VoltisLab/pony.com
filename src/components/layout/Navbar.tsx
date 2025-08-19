@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import LottiePlayer from '../animatedHorse';
 
 interface NavLink {
   label: string;
@@ -80,15 +81,17 @@ const Navbar: React.FC<NavbarProps> = ({
       >
         <div className="relative z-10 flex items-center justify-between h-full">
           {/* Logo */}
-          <div className="flex items-center">
-            <Image
+          <div className="flex items-center sf-font text-white font-medium text-xl">
+            {/* <Image
               src={logo}
               alt="PONY Logo"
               width={150}
               height={50}
               className="h-8 w-auto lg:h-[3vw]"
               priority
-            />
+            /> */}
+            <p className='sf-font'>PONY</p> 
+         <LottiePlayer/>
           </div>
 
           {/* Navigation Links - Desktop */}
