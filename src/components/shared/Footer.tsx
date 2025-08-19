@@ -33,11 +33,6 @@ const Footer = () => {
                   <Link href="/terms" className="text-white text-sm hover:text-gray-600 2xl:text-lg transition-colors">Terms of Use</Link>
                   <Link href="/cookie-policy" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Cookie Policy</Link>                  
                 </div>
-                <div className="flex flex-col gap-3 2xl:gap-4">
-                  <Link href="/privacy-policy" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Privacy Policy</Link>
-                  <Link href="/terms" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Terms of Use</Link>
-                  <Link href="/cookie-policy" className="text-white 2xl:text-lg text-sm hover:text-gray-600 transition-colors">Cookie Policy</Link>                 
-                </div>
               </div>
             </div>
 
