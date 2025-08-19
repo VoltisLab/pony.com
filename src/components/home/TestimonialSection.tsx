@@ -86,7 +86,7 @@ const TestimonialSection = () => {
         {/* left rail (image + testimonial) anchored with viewport padding */}
         <div className="relative z-10 flex items-end gap-[1vw] pl-[5vw] pr-[2vw]">
           {/* left: image stack */}
-          <div className="relative w-[22vw] h-[26vw] z-[100]">
+          <div className="relative w-[22vw] h-[26vw] aspect-square z-[100]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`image-${currentIndex}`}
@@ -94,9 +94,9 @@ const TestimonialSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="w-full h-full relative rounded-[1.2vw] overflow-hidden border-2 border-red-500"
+                className="w-full h-full relative rounded-[1.2vw] overflow-hidden border-2 aspect-square"
               >
-                <Image src="/cafe.png" alt="Couple at cafe" fill className="object-cover" />
+                <Image src="/cafe.png" alt="Couple at cafe" fill className="object-contain" />
               </motion.div>
             </AnimatePresence>
 
@@ -104,13 +104,13 @@ const TestimonialSection = () => {
               key={`image-bg-${nextIndex}`}
               className="absolute -top-[0.8vw] -left-[0.8vw] rounded-[1.2vw] overflow-hidden opacity-10 -z-10 w-full h-full"
             >
-              <Image src="/cafe.png" alt="Background image" fill className="object-cover" />
+              <Image src="/cafe.png" alt="Background image" fill className="object-contain" />
             </motion.div>
           </div>
 
           {/* middle: fixed vw width so it never gets skinny or drift center */}
           <div className="flex-0 w-[43vw] min-w-[33vw] ">
-            <div className="relative mb-[0.8vw]">
+            <div className="relative mb-[0.2vw]">
               <AnimatePresence mode="wait">
                 <motion.h2
                   key={`title-${currentIndex}`}
