@@ -54,7 +54,7 @@ export default function TermsOfUsePage() {
           <section id="acceptance" className="scroll-mt-28 py-10 first:pt-0">
             <Header title="Acceptance of Terms" />
             <p className="text-white/80 leading-relaxed">
-              These Terms of Use ("Terms") govern your access to and use of PONY, operated by Voltis Labs LTD. By creating an account, accessing, or using the app or website, you agree to be bound by these Terms and our Privacy Policy and Cookie Policy. If you do not agree, do not use PONY.
+              These Terms of Use (&quot;Terms&quot;) govern your access to and use of PONY, operated by Voltis Labs LTD. By creating an account, accessing, or using the app or website, you agree to be bound by these Terms and our Privacy Policy and Cookie Policy. If you do not agree, do not use PONY.
             </p>
           </section>
 
@@ -81,7 +81,7 @@ export default function TermsOfUsePage() {
           <section id="user-content" className="scroll-mt-28 py-10">
             <Header title="User Content & Licenses" />
             <p className="text-white/80 leading-relaxed mb-4">
-              You may submit content such as photos, text, and other materials ("User Content"). You retain ownership of your User Content. By submitting User Content, you grant PONY a worldwide, non-exclusive, royalty-free, transferable, sublicensable license to use, host, store, reproduce, adapt, publish, display, and distribute such content in connection with operating, promoting, and improving the service.
+              You may submit content such as photos, text, and other materials (&quot;User Content&quot;). You retain ownership of your User Content. By submitting User Content, you grant PONY a worldwide, non-exclusive, royalty-free, transferable, sublicensable license to use, host, store, reproduce, adapt, publish, display, and distribute such content in connection with operating, promoting, and improving the service.
             </p>
             <p className="text-white/80 leading-relaxed">
               You represent and warrant that you have all rights necessary to submit the User Content and that it does not infringe or violate any third-party rights or laws.
@@ -130,7 +130,7 @@ export default function TermsOfUsePage() {
           <section id="disclaimers" className="scroll-mt-28 py-10">
             <Header title="Disclaimers" />
             <p className="text-white/80 leading-relaxed">
-              The service is provided on an "AS IS" and "AS AVAILABLE" basis to the fullest extent permitted by law. We do not warrant that the service will be uninterrupted, secure, or error-free, or that any content will be accurate or reliable.
+              The service is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis to the fullest extent permitted by law. We do not warrant that the service will be uninterrupted, secure, or error-free, or that any content will be accurate or reliable.
             </p>
           </section>
 
@@ -162,7 +162,7 @@ export default function TermsOfUsePage() {
           <section id="changes" className="scroll-mt-28 py-10">
             <Header title="Changes to these Terms" />
             <p className="text-white/80 leading-relaxed">
-              We may update these Terms from time to time. When we do, we will revise the "Last updated" date above and, where required, provide additional notice. Continued use of the service after changes become effective constitutes acceptance of the updated Terms.
+              We may update these Terms from time to time. When we do, we will revise the &quot;Last updated&quot; date above and, where required, provide additional notice. Continued use of the service after changes become effective constitutes acceptance of the updated Terms.
             </p>
           </section>
 
