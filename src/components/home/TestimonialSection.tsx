@@ -110,7 +110,7 @@ const TestimonialSection = () => {
 
           {/* middle: fixed vw width so it never gets skinny or drift center */}
           <div className="flex-0 w-[43vw] min-w-[33vw] ">
-            <div className="relative mb-[0.8vw]">
+            <div className="relative mb-[0.2vw]">
               <AnimatePresence mode="wait">
                 <motion.h2
                   key={`title-${currentIndex}`}
