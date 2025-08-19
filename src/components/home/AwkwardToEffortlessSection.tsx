@@ -48,7 +48,7 @@ const AwkwardToEffortlessSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.h2
-                    className="text-lg sm:text-xl md:text-2xl lg:text-[2.8vw] xl:text-[2.4vw] 2xl:text-[2.0vw] 3xl:text-[1.8vw] font-semibold text-white leading-[1.1] mb-4 lg:mb-[1.042vw]  lg:max-w-none"
+                    className="text-lg sm:text-xl md:text-2xl lg:text-[2.8vw] leading-[145%] xl:text-[2.4vw] 2xl:text-[2.0vw] 3xl:text-[1.8vw] font-semibold text-white mb-4 lg:mb-[1.042vw]  lg:max-w-none"
                     style={{
                       fontSize: 'clamp(1.125rem, 2.4vw, 3.5rem)'
                     }}
@@ -62,7 +62,7 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
 
                   <motion.p
-                    className="text-white text-[10px] sm:text-xs md:text-sm lg:text-[1.2vw] xl:text-[1.0vw] 2xl:text-[0.9vw] 3xl:text-[0.8vw] leading-relaxed  lg:max-w-none"
+                    className="text-white text-[10px] sm:text-xs md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[0.9vw] 3xl:text-[0.8vw] leading-relaxed  lg:max-w-none"
                     style={{
                       fontSize: 'clamp(0.625rem, 1.0vw, 1.2rem)'
                     }}

@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { LanguageDropdown } from './LanguageDropDown';
-import { NewsletterInline } from './Subscribe';
-import AppStoreButtons from './Badge';
+import { LanguageDropdown } from '../shared/LanguageDropDown';
+import { NewsletterInline } from '../shared/Subscribe';
+import AppStoreButtons from '../shared/Badge';
 import Link from 'next/link';
 
 const Footer = () => {

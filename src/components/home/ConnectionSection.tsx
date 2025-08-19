@@ -39,19 +39,19 @@ const ConnectionSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-full w-full lg:w-fit mb-5 md:mb-12 lg:mb-[2vw] flex flex-col items-center justify-center lg:items-start">
+            <div className="max-w-full w-full lg:w-fit mb-5 md:mb-12 lg:mb-[5vw] flex flex-col items-center justify-center lg:items-start">
               <motion.h1
-                className="text-xl w-[70vw] lg:w-[100%] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-[3.5vw] 2xl:text-[2vw] font-semibold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
+                className="text-xl w-[70vw] lg:w-[100%] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-[3.5vw] 2xl:text-[2vw] font-bold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                No Awkward Starts. Just Real<br />Connections.
+                No Awkward Starts. <br />Just Real Connections.
               </motion.h1>
 
               <motion.p
-                className="text-[10px] sm:text-lg md:text-xl lg:text-[1.6vw] 2xl:text-[1vw] text-black leading-relaxed"
+                className="text-[10px] sm:text-lg md:text-xl lg:text-[1.6vw] 2xl:text-[1vw] font-semibold text-black leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}

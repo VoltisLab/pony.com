@@ -20,7 +20,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   onButtonClick,
 }) => {
   return (
-    <section className="relative w-full lg:h-screen h-[65vh] overflow-hidden">
+    <section className="relative w-full lg:h-screen min-h-screen h-[65vh] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       {/* Hero Content */}
@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             className="
               text-sm sm:text-2xl md:text-3xl
               lg:text-[2.2vw] xl:text-[2vw] 2xl:text-[1.8vw]
-              text-white/90 mb-8 sm:mb-10 lg:mb-[2.5vw] font-light px-4
+              text-white/90 mb-8 sm:mb-10 lg:mb-[2.5vw] font-semibold px-4
             "
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
