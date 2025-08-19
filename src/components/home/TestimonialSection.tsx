@@ -104,7 +104,7 @@ const TestimonialSection = () => {
               key={`image-bg-${nextIndex}`}
               className="absolute -top-[0.8vw] -left-[0.8vw] rounded-[1.2vw] overflow-hidden opacity-10 -z-10 w-full h-full"
             >
-              <Image src="/cafe.png" alt="Background image" fill className="object-cover" />
+              <Image src="/cafe.png" alt="Background image" fill className="object-contain" />
             </motion.div>
           </div>
 
