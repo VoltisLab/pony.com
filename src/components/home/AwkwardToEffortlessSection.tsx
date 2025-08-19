@@ -39,7 +39,7 @@ const AwkwardToEffortlessSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent lg:from-black/70 lg:via-black/40" />
 
               {/* Text Content Overlay */}
-              <div className="absolute inset-0 flex items-end mb-5 lg:mb-[1.042vw] ">
+              <div className="absolute inset-0 flex items-end mb-5 lg:mb-[1.5vw] ">
                 <motion.div
                   className="pl-5 pr-4 lg:pl-[1.042vw] lg:pr-[1.667vw]"
                   initial={{ opacity: 0, y: 50 }}
@@ -48,10 +48,7 @@ const AwkwardToEffortlessSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.h2
-                    className="text-lg sm:text-xl md:text-2xl lg:text-[2.8vw] leading-[145%] xl:text-[2.4vw] 2xl:text-[2.0vw] 3xl:text-[1.8vw] font-semibold text-white mb-4 lg:mb-[1.042vw]  lg:max-w-none"
-                    style={{
-                      fontSize: 'clamp(1.125rem, 2.4vw, 3.5rem)'
-                    }}
+                    className=" leading-[145%] font-semibold text-white mb-4 lg:mb-[1.042vw] text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3vw] xl:text-[3.5vw] 2xl:text-[3.5vw] 3xl:text-[2vw]"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -62,10 +59,7 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
 
                   <motion.p
-                    className="text-white text-[10px] sm:text-xs md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[0.9vw] 3xl:text-[0.8vw] leading-relaxed  lg:max-w-none"
-                    style={{
-                      fontSize: 'clamp(0.625rem, 1.0vw, 1.2rem)'
-                    }}
+                    className="text-white text-[10px] sm:text-xs md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[1.5vw] 3xl:text-[0.8vw] leading-relaxed lg:max-w-none"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
