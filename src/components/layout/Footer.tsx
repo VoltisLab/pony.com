@@ -19,7 +19,7 @@ const Footer = () => {
                 No More &quot;Hey.&quot;
               </h2>
 
-              <h2 className="text-2xl font-semibold text-black leading-tight mb-2 lg:mb-[2.5vw] 2xl:mb-8 block md:hidden w-[80vw]">
+              <h2 className="text-2xl font-semibold text-white leading-tight mb-2 lg:mb-[2.5vw] 2xl:mb-8 block md:hidden w-[80vw]">
                 From Awkward to Effortless. No More &quot;Hey.&quot;
               </h2>
 
@@ -63,9 +63,9 @@ const Footer = () => {
           {/* Footer Links (mobile) */}
           <div className="flex md:hidden flex-row gap-6 w-full justify-between mt-14">
             <div className="flex flex-col gap-3">
-              <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Terms of Use</a>
-              <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Cookie Policy</a>
+              <Link href="/privacy-policy" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Privacy Policy</Link>
+                  <Link href="/terms" className="text-white text-sm hover:text-gray-600 2xl:text-lg transition-colors">Terms of Use</Link>
+                  <Link href="/cookie-policy" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Cookie Policy</Link>                  
             </div>
             {/* <div className="flex flex-col gap-3 mr-20">
               <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Privacy Policy</a>
