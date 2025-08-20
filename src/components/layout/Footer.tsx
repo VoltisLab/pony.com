@@ -37,27 +37,38 @@ const Footer = () => {
             </div>
 
             {/* Right Section - Image and App Downloads */}
-          <div className="flex-1 flex flex-col items-start w-full md:max-w-[320px] lg:max-w-fit xl:max-w-1/4 2xl:max-w-1/4 mt-10">
-  {/* Main Image - Full Width */}
-  <div className="w-full h-[250px] lg:h-[25.23vw] xl:h-[25.23vw] 2xl:h-[450px] rounded-sm lg:rounded-[1.2vw] 2xl:rounded-3xl mb-6 lg:mb-[1vw] 2xl:mb-6 relative overflow-hidden">
-    <Image
-      src="/footer.png"
-      alt="Couple sitting on dock with mountain lake background"
-      fill
-      className="object-fill lg:rounded-[1.2vw] 2xl:rounded-3xl"
-    />
-  </div>
-  
-  {/* Language Selector - Left Aligned */}
-  <div className="w-full">
-    <LanguageDropdown/>
-  </div>
-  
-  {/* App badges - Left Aligned */}
-  <div className='hidden lg:flex w-full'>
-    <AppStoreButtons/>
-  </div>
-</div>
+            <div className="flex flex-col items-end w-full md:w-auto mt-10 md:mt-0">
+              {/* Main Image - Full Width */}
+              <div className="w-full md:w-auto md:block hidden rounded-sm lg:rounded-[1.2vw] 2xl:rounded-3xl mb-6 lg:mb-[1vw] 2xl:mb-6 relative overflow-hidden">
+                <Image
+                  src="/footer.png"
+                  alt="Couple sitting on dock with mountain lake background"
+                  height={452}
+                  width={384}
+                  className="object-contain lg:rounded-[1.2vw] 2xl:rounded-3xl"
+                />
+              </div>
+
+              <div className="w-full md:hidden flex rounded-sm lg:rounded-[1.2vw] relative overflow-hidden">
+                <Image
+                  src="/footer.png"
+                  alt="Couple sitting on dock with mountain lake background"
+                  height={375}
+                  width={319}
+                  className="object-contain lg:rounded-[1.2vw] 2xl:rounded-3xl"
+                />
+              </div>
+              
+              {/* Language Selector - Right Aligned */}
+              <div className="w-full md:w-full flex justify-start ">
+                <LanguageDropdown/>
+              </div>
+              
+              {/* App badges - Right Aligned */}
+              <div className='hidden lg:flex w-full justify-start'>
+                <AppStoreButtons/>
+              </div>
+            </div>
           </div>
 
           {/* Footer Links (mobile) */}
@@ -67,11 +78,6 @@ const Footer = () => {
                   <Link href="/terms" className="text-white text-sm hover:text-gray-600 2xl:text-lg transition-colors">Terms of Use</Link>
                   <Link href="/cookie-policy" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Cookie Policy</Link>                  
             </div>
-            {/* <div className="flex flex-col gap-3 mr-20">
-              <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Terms of Use</a>
-              <a href="#" className="text-black text-[10px] hover:text-gray-600 transition-colors">Cookie Policy</a>
-            </div> */}
           </div>
         </div>
       </div>
