@@ -136,7 +136,7 @@ const TestimonialSection = () => {
     animate={{ opacity: 1, x: 0, scale: 1 }}
     exit={{ opacity: 0, x: -50, scale: 0.95 }}
     transition={{ duration: 0.5, ease: 'easeInOut' }}
-    className="bg-white rounded-r-[0.8vw] p-[1.2vw] w-full h-[12vw] shadow-2xl border border-[#ED1B24]"
+    className="bg-white rounded-[0.8vw] md:rounded-r-[0.8vw] md:rounded-l-none p-[1.2vw] w-full h-[12vw] shadow-2xl border border-[#ED1B24]"
   >
     <div className="flex items-start gap-[0.6vw]">
       <p className="text-black text-[1.3vw] leading-[1.6]">
