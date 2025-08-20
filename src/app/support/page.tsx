@@ -118,7 +118,7 @@ export default function SupportPage() {
               <section id="contact" className="scroll-mt-28 py-10">
                 <Header title="Contact Support" />
                 <p className="text-white/80 leading-relaxed mb-4">
-                  Need more help? Reach out and we'll get back as soon as possible.
+                  Need more help? Reach out and we&apos;ll get back as soon as possible.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href="/contact" className="inline-flex">
