@@ -35,12 +35,12 @@ const TestimonialSection = () => {
             </div>
           </div>
 
-          <div className="w-full text-center px-4">
+          <div className="w-full text-center pr-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-6">
               PONY-<span className="text-[#ED1B24] font-medium">tale</span>
             </h2>
 
-            <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-2xl border border-[#ED1B24]">
+            <div className="bg-white rounded-r-2xl p-4 sm:p-6 shadow-2xl border border-[#ED1B24]">
               <div className="flex items-start gap-2">
                 <span className="text-red-500 text-2xl sm:text-3xl font-bold flex-shrink-0">&quot;</span>
                 <p className="text-black text-xs sm:text-base leading-relaxed">
