@@ -38,6 +38,8 @@ yarn-error.log*
 .claude
 .qodo
 ~
+.idea/material_theme_project_new.xml
+.idea/vcs.xml
 
 # typescript
 *.tsbuildinfo
