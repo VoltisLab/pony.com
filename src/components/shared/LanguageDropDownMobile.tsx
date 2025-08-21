@@ -42,7 +42,7 @@ export function LanguageDropdownMobile() {
       {/* Language Selector */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between p-2 w-full md:max-w-[90%] border border-[#9E9E9E] rounded-full text-white cursor-pointer hover:border-gray-400 transition-colors"
+        className="flex items-center justify-between p-2.5 w-full md:max-w-[90%] border border-[#9E9E9E] rounded-full text-white cursor-pointer hover:border-gray-400 transition-colors"
       >
         <div className="flex items-center gap-3 lg:gap-[0.8vw] 2xl:gap-[0.6vw]">
           {/* Globe icon */}
