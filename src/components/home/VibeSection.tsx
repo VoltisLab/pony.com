@@ -57,7 +57,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                “We group people by<br />actual vibe,  not just<br />who's nearby.”
+                “We group people by<br />actual vibe,  not just<br />who&apos;s nearby.”
               </motion.h2>
 
               <motion.p
@@ -77,7 +77,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                We don't think chemistry comes from geography. That's why your<br />matches are based on your world, your energy, and your rhythm.
+                We don&apos;t think chemistry comes from geography. That&apos;s why your<br />matches are based on your world, your energy, and your rhythm.
               </motion.p>
             </div>
           </motion.div>

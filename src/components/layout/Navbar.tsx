@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Logo from '../Logo';
 
@@ -10,12 +9,10 @@ interface NavLink {
 }
 
 interface NavbarProps {
-  logo?: string;
   links?: NavLink[];
 }
 
 const Navbar: React.FC<NavbarProps> = ({
-  logo = '/logo.png',
   links = [
     { label: 'Mission', href: '/mission' },
     { label: 'About', href: '/about' },
