@@ -183,7 +183,7 @@ const Navbar: React.FC<NavbarProps> = ({
               </div>
 
               {/* Menu Content */}
-              <div className="px-6 py-4">
+              <div className="px-6 pt-4 pb-6">
                 {/* Logo */}
                
 
@@ -212,7 +212,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
                 {/* Optional: Additional content or social links */}
                 <motion.div
-                  className="mt-12 pt-8 border-t border-gray-700"
+                  className="mt-4 py-2 border-t border-gray-700"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.3 }}
