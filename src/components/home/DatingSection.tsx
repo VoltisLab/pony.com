@@ -4,6 +4,7 @@ import Image from 'next/image';
 import InfiniteScrollText from '../shared/InfiniteScrollText';
 import { motion } from 'framer-motion';
 import AppStoreButtons from '../shared/Badge';
+import InfiniteScrollTextMobile from '../shared/InfiniteScrollTextMobile';
 
 interface DatingSectionProps {
   leftImage?: string;
@@ -125,6 +126,14 @@ const DatingSection: React.FC<DatingSectionProps> = ({
           speed={45}
           className="py-6 lg:py-[1vw]"
           itemClassName="text-gray-400 text-sm font-medium"
+        />
+      </div>
+
+      <div className="max-w-full flex md:hidden mx-auto xl:mt-0 ">
+        <InfiniteScrollTextMobile
+          items={scrollingTags}
+          speed={45}
+          itemClassName="font-medium"
         />
       </div>
     </section>

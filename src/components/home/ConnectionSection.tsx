@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import InfiniteScrollText from '../shared/InfiniteScrollText';
 import { motion } from 'framer-motion';
+import InfiniteScrollTextMobile from '../shared/InfiniteScrollTextMobile';
 
 const ConnectionSection = () => {
   const scrollingTags = [
@@ -13,7 +14,7 @@ const ConnectionSection = () => {
 
   return (
     <section className="w-full bg-black overflow-hidden">
-      <div>
+      <div className='hidden md:block'>
         <InfiniteScrollText
           items={scrollingTags}
           speed={45}
@@ -21,6 +22,15 @@ const ConnectionSection = () => {
           itemClassName="text-gray-500 text-sm font-medium"
         />
       </div>
+
+      <div className="max-w-full block md:hidden ">
+        <InfiniteScrollTextMobile
+          items={scrollingTags}
+          speed={45}
+          itemClassName=" font-medium"
+        />
+      </div>
+      
 
       {/* Main content */}
       <div className="w-full h-screen md:h-[336px] lg:h-[38vw] 2xl:h-[20vw]">
