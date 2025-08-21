@@ -20,7 +20,7 @@ export function LanguageDropdown() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full hidden lg:flex max-w-sm lg:max-w-[28vw] xl:max-w-[29vw] 2xl:max-w-[25vw] mb-4 lg:mb-[1vw] 2xl:mb-[0.6vw] relative">
+    <div className="w-full lg:flex max-w-sm lg:max-w-[28vw] xl:max-w-[29vw] 2xl:max-w-[25vw] mb-4 lg:mb-[1vw] 2xl:mb-[0.6vw] relative">
       {/* Dropdown (positioned above) */}
       {isOpen && (
         <div className="absolute bottom-full mb-2 w-full text-white border border-gray-300 rounded-lg shadow-lg z-10 bg-gray-800">
@@ -49,7 +49,7 @@ export function LanguageDropdown() {
           <span className="lg:text-[1.11vw] 2xl:text-[0.9vw]">
             <FaGlobeAfrica color="white" />
           </span>
-          <span className="text-xs lg:text-[0.8vw] 2xl:text-[0.35vw] w-fit text-center font-semibold">
+          <span className="text-[10px] lg:text-[0.8vw] 2xl:text-[0.35vw] w-fit text-center font-semibold">
             {selectedLanguage}
           </span>
         </div>

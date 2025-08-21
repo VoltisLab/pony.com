@@ -4,6 +4,7 @@ import { LanguageDropdown } from '../shared/LanguageDropDown';
 import { NewsletterInline } from '../shared/Subscribe';
 import AppStoreButtons from '../shared/Badge';
 import Link from 'next/link';
+import AppStoreButtonsMobile from '../shared/AppstoreButtonsMobile';
 
 const Footer = () => {
   return (
@@ -49,18 +50,18 @@ const Footer = () => {
                 />
               </div>
 
-              <div className="w-full md:hidden flex rounded-sm lg:rounded-[1.2vw] relative overflow-hidden">
+              <div className="w-full md:hidden block rounded-sm lg:rounded-[1.2vw] relative overflow-hidden">
                 <Image
                   src="/footer.png"
                   alt="Couple sitting on dock with mountain lake background"
                   height={375}
                   width={319}
-                  className="object-contain lg:rounded-[1.2vw] 2xl:rounded-3xl"
+                  className="object-contain w-full lg:rounded-[1.2vw] 2xl:rounded-3xl"
                 />
               </div>
               
               {/* Language Selector - Right Aligned */}
-              <div className="w-full md:w-full flex justify-start ">
+              <div className="w-full hidden md:flex md:w-full flex justify-start ">
                 <LanguageDropdown/>
               </div>
               
@@ -71,6 +72,11 @@ const Footer = () => {
             </div>
           </div>
 
+          
+          <div className='mt-4 -mx-4 flex gap-4 items-end max-w-[93%]'>
+            <AppStoreButtonsMobile />
+            <LanguageDropdown/>
+          </div>
           {/* Footer Links (mobile) */}
           <div className="flex md:hidden flex-row gap-6 w-full justify-between mt-14">
             <div className="flex flex-col gap-3">
