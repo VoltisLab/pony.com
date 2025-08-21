@@ -37,8 +37,8 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col gap-3 2xl:gap-4">
                   <Link href="/support" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Support</Link>
-                  <Link href="/contact" className="text-white text-sm hover:text-gray-600 2xl:text-lg transition-colors">Contact</Link>
-                  <Link href="/about" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">About</Link>                  
+                  <Link href="/contact" className="text-white text-sm hover:text-gray-600 2xl:text-lg transition-colors">Contact Us</Link>
+                  <Link href="/about" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">About Us</Link>                  
                 </div>
               </div>
             </div>
@@ -93,8 +93,8 @@ const Footer = () => {
             </div>
               <div className="flex flex-col gap-3 2xl:gap-4">
                   <Link href="/support" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">Support</Link>
-                  <Link href="/contact" className="text-white text-sm hover:text-gray-600 2xl:text-lg transition-colors">Contact</Link>
-                  <Link href="/about" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">About</Link>                  
+                  <Link href="/contact" className="text-white text-sm hover:text-gray-600 2xl:text-lg transition-colors">Contact Us</Link>
+                  <Link href="/about" className="text-white text-sm 2xl:text-lg hover:text-gray-600 transition-colors">About Us</Link>                  
                 </div>
           </div>
         </div>
