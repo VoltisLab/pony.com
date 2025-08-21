@@ -49,7 +49,7 @@ const InfiniteScrollTextMobile: React.FC<InfiniteScrollTextProps> = ({
                 className='h-5 w-5 lg:h-[1.5vw] lg:w-[1.5vw] flex-shrink-0' 
                 size={25}
               />
-              <span className="inline-block leading-[160%] mx-4 text-[#202020] text-[10px] flex-shrink-0 whitespace-nowrap">
+              <span className="inline-block leading-[160%] mx-4 text-gray-400 text-sm flex-shrink-0 whitespace-nowrap">
                 {item}
               </span>
             </div>
