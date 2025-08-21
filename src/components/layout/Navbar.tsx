@@ -154,7 +154,21 @@ const Navbar: React.FC<NavbarProps> = ({
               exit="exit"
             >
               {/* Close Button */}
-              <div className="flex justify-end p-6">
+              <div className="flex justify-between items-center px-6 py-2 border-b border-gray-700">
+                 <motion.div
+                  className=" "
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.3 }}
+                >
+                  <Image
+                    src={logo}
+                    alt="PONY Logo"
+                    width={120}
+                    height={40}
+                    className="h-8 w-auto"
+                  />
+                </motion.div>
                 <motion.button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-white hover:text-gray-300 transition-colors p-2"
@@ -171,23 +185,10 @@ const Navbar: React.FC<NavbarProps> = ({
               {/* Menu Content */}
               <div className="px-6 py-4">
                 {/* Logo */}
-                <motion.div
-                  className="mb-8 pb-6 border-b border-gray-700"
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.3 }}
-                >
-                  <Image
-                    src={logo}
-                    alt="PONY Logo"
-                    width={120}
-                    height={40}
-                    className="h-8 w-auto"
-                  />
-                </motion.div>
+               
 
                 {/* Navigation Links */}
-                <nav className="space-y-6">
+                <nav className="space-y-2">
                   {links.map((link, index) => (
                     <motion.div
                       key={link.label}

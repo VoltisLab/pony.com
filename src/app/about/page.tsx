@@ -108,7 +108,7 @@ export default function AboutPage() {
           <section id="team" className="scroll-mt-28 py-10">
             <Header title="Team" />
             <p className="text-white/80 leading-relaxed mb-6">
-              PONY is built by a small, focused team at Voltis Labs LTD.—designers and engineers who care about connection, craft, and community.
+              PONY is built by Voltis Labs LTD, designers and engineers who care about connection, craft, and community.
             </p>
             <div className="relative h-56 sm:h-72 lg:h-[18vw] rounded-2xl overflow-hidden border border-white/10 mb-6">
               <Image
