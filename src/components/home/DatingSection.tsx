@@ -48,12 +48,23 @@ const DatingSection: React.FC<DatingSectionProps> = ({
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-full h-[400px] lg:h-[70vh]  relative lg:rounded-r-[1.2vw] lg:overflow-hidden">
+            <div className="md:block hidden w-full h-[400px] lg:h-[70vh]  relative lg:rounded-r-[1.2vw] lg:overflow-hidden">
               <Image
                 src={leftImage}
                 alt="Dating couple"
                 fill
                 className="object-cover"
+                priority
+              />
+            </div>
+
+            <div className="md:hidden block w-full relative">
+              <Image
+                src={'/dating.jpg'}
+                alt="Dating couple"
+                width={375}
+                height={391}
+                className="object-contain w-full"
                 priority
               />
             </div>
@@ -69,7 +80,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
           >
             <div className="max-w-2xl lg:max-w-[46vw] text-center flex flex-col items-center justify-end">
               <motion.h2
-                className="text-2xl sm:text-3xl w-[120px] md:w-fit md:text-4xl lg:text-[3.5vw] font-bold mb-6 sm:mb-8 lg:mb-[1vw]"
+                className="text-2xl leading-[160%] sm:text-3xl w-[120px] md:w-fit md:text-4xl lg:text-[3.5vw] font-bold mb-6 sm:mb-8 lg:mb-[1vw]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -79,7 +90,7 @@ const DatingSection: React.FC<DatingSectionProps> = ({
               </motion.h2>
 
               <motion.p
-                className="text-sm lg:text-[1.25vw] font-medium leading-relaxed mb-1 sm:mb-10"
+                className="text-sm md:block hidden lg:text-[1.25vw] font-medium leading-[160%] mb-1 sm:mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -88,8 +99,20 @@ const DatingSection: React.FC<DatingSectionProps> = ({
                 In our community, dating isn&apos;t about swiping endlessly. We believe the strongest relationships begin with shared passions - whether that&apos;s music, food, pets, fitness, or films. When you join, you select your core interests, and we <span className="text-[#F25656]">match</span> you with people who vibe with the same.
               </motion.p>
 
+              <motion.p
+                className="text-[14px] md:hidden block font-medium leading-[160%] mb-1 sm:mb-10 "
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                viewport={{ once: true }}
+              >
+                In our community, dating isn&apos;t about swiping<br />endlessly. We believe the strongest relationships<br />begin with shared passions - whether that&apos;s music, food, pets, fitness, or films. When you join, you<br />select your core interests, and we <span className="text-[#F25656]">match</span> you with<br />people who vibe with the same.
+              </motion.p>
+
               {/* App Store Buttons — Desktop/Tablet */}
+           <div className='md:block hidden'>
            <AppStoreButtons/>
+           </div>
             </div>
           </motion.div>
         </motion.div>

@@ -41,7 +41,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
           >
             <div className="w-full flex flex-col items-center lg:items-start">
               <motion.h2
-                className="text-2xl w-[70vw] md:w-full sm:text-3xl md:text-4xl lg:text-[3.8vw] 2xl:text-[1.5vw] lg:mb-[1.4vw] font-semibold leading-[160%]"
+                className="md:block hidden text-2xl w-[70vw] md:w-full sm:text-3xl md:text-4xl lg:text-[3.8vw] 2xl:text-[1.5vw] lg:mb-[1.4vw] font-semibold leading-[160%]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -50,14 +50,34 @@ const VibeSection: React.FC<VibeSectionProps> = ({
                 {title}
               </motion.h2>
 
+              <motion.h2
+                className="md:hidden block w-[70vw] text-[25px] mb-4 md:w-full lg:mb-[1.4vw] font-semibold leading-[160%]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                “We group people by<br />actual vibe,  not just<br />who's nearby.”
+              </motion.h2>
+
               <motion.p
-                className="text-[11px] sm:text-lg md:text-xl lg:text-[1.35vw] lg:mb-[1.4vw] 2xl:text-[0.9vw] text-white leading-relaxed"
+                className="md:block hidden text-[11px] sm:text-lg md:text-xl lg:text-[1.35vw] lg:mb-[1.4vw] 2xl:text-[0.9vw] text-white leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
                 {description}
+              </motion.p>
+
+              <motion.p
+                className="md:hidden block text-[10px] text-white leading-[160%]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                We don't think chemistry comes from geography. That's why your<br />matches are based on your world, your energy, and your rhythm.
               </motion.p>
             </div>
           </motion.div>
@@ -134,7 +154,11 @@ const VibeSection: React.FC<VibeSectionProps> = ({
               transition={{ duration: 0.6, delay: 0.9 }}
               viewport={{ once: true }}
             >
-              <p className="text-white text-sm sm:text-xl md:text-2xl lg:text-[1.8vw] 2xl:text-[0.8vw] font-sfpro text-center leading-[160%] font-medium px-4 sm:px-6 py-0 sm:py-4 2xl:py-12">
+              <p className="md:block hidden text-white text-sm sm:text-xl md:text-2xl lg:text-[1.8vw] 2xl:text-[0.8vw] font-sfpro text-center leading-[160%] font-medium px-4 sm:px-6 py-0 sm:py-4 2xl:py-12">
+                {subtitle}
+              </p>
+
+              <p className="block md:hidden text-white text-[15px] font-sfpro text-center leading-[160%] font-medium px-4 -mt-5 z-40">
                 {subtitle}
               </p>
             </motion.div>

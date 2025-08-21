@@ -20,9 +20,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   onButtonClick,
 }) => {
   return (
-    <section className="relative w-full lg:h-screen min-h-screen h-[65vh] overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative w-full md:min-h-screen lg:h-screen xl:min-h-screen overflow-hidden">
+      {/* Background Image - Desktop */}
+      <div className="absolute inset-0 z-0 xl:block hidden">
         <Image
           src={backgroundImage}
           alt="Hero background"
@@ -34,11 +34,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="absolute inset-0 bg-black/10" />
       </div>
 
+      {/* Background Image - Mobile */}
+      <div className="xl:hidden block relative">
+        <Image
+          src={'/mobileHero.png'}
+          alt="Hero background"
+          height={498}
+          width={375}
+          className="object-contain w-full h-auto"
+          priority
+        
+        />
+      </div>
+
       {/* Hero Content */}
       <div
         className="
-          relative z-10 flex items-center justify-center gap-20
-          h-full mt-0 sm:mt-20 md:mt-24
+          absolute inset-0 z-10 flex items-center justify-center gap-20
+          xl:h-full xl:mt-0 xl:sm:mt-20 xl:md:mt-24
           lg:mt-[6.8vw] lg:gap-[6vw] lg:px-[6vw]
           px-4 sm:px-6 
         "
