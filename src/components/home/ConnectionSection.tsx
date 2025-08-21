@@ -51,7 +51,7 @@ const ConnectionSection = () => {
               </motion.h1>
 
               <motion.h1
-                className="md:hidden block text-[20px] w-[70vw] lg:w-[100%] text-center leading-[160%] font-bold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
+                className="md:hidden block text-2xl w-[75vw] lg:w-[100%] text-center leading-[160%] font-bold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -73,14 +73,14 @@ const ConnectionSection = () => {
 
 
               <motion.p
-                className="md:hidden block text-[10px] text-center font-semibold text-black leading-[160%]"
+                className="md:hidden block text-sm text-center font-semibold text-black leading-[160%]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
                 We remove the awkward, so you can focus on
-                what really matters: <span className="font-bold"><br />Building Something Real.</span>
+                what really matters: <span className="font-bold">Building Something Real.</span>
               </motion.p>
             </div>
           </motion.div>

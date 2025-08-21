@@ -51,7 +51,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
               </motion.h2>
 
               <motion.h2
-                className="md:hidden block w-[70vw] text-[25px] mb-4 md:w-full lg:mb-[1.4vw] font-semibold leading-[160%]"
+                className="md:hidden block w-[70vw] text-2xl mb-4 md:w-full lg:mb-[1.4vw] font-semibold leading-[160%]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -71,13 +71,13 @@ const VibeSection: React.FC<VibeSectionProps> = ({
               </motion.p>
 
               <motion.p
-                className="md:hidden block text-[10px] text-white leading-[160%]"
+                className="md:hidden block text-sm text-white leading-[160%]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                We don&apos;t think chemistry comes from geography. That&apos;s why your<br />matches are based on your world, your energy, and your rhythm.
+                We don&apos;t think chemistry comes from geography. That&apos;s why your matches are based on your world, your energy, and your rhythm.
               </motion.p>
             </div>
           </motion.div>

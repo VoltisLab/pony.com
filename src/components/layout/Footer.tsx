@@ -5,6 +5,7 @@ import { NewsletterInline } from '../shared/Subscribe';
 import AppStoreButtons from '../shared/Badge';
 import Link from 'next/link';
 import AppStoreButtonsMobile from '../shared/AppstoreButtonsMobile';
+import { LanguageDropdownMobile } from '../shared/LanguageDropDownMobile';
 
 const Footer = () => {
   return (
@@ -73,9 +74,9 @@ const Footer = () => {
           </div>
 
           
-          <div className='md:hidden block mt-4 -mx-4 flex gap-4 items-end max-w-[93%]'>
+          <div className='md:hidden block mt-4 flex gap-4 items-end max-w-[88%]'>
             <AppStoreButtonsMobile />
-            <LanguageDropdown/>
+            <LanguageDropdownMobile />
           </div>
           {/* Footer Links (mobile) */}
           <div className="flex md:hidden flex-row gap-6 w-full justify-between mt-14">

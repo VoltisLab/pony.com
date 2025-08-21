@@ -48,7 +48,7 @@ const AwkwardToEffortlessSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.h2
-                    className=" leading-[145%] font-semibold text-white mb-4 lg:mb-[1.042vw] text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3vw] xl:text-[3.5vw] 2xl:text-[3.5vw] 3xl:text-[2vw]"
+                    className=" leading-[145%] font-semibold text-white mb-4 lg:mb-[1.042vw] text-2xl md:text-[2.5rem] lg:text-[3vw] xl:text-[3.5vw] 2xl:text-[3.5vw] 3xl:text-[2vw]"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -59,13 +59,13 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
 
                   <motion.p
-                    className="text-white text-[10px] sm:text-xs md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[1.5vw] 3xl:text-[0.8vw] leading-relaxed lg:max-w-none"
+                    className="text-white leading-[145%] text-sm md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[1.5vw] 3xl:text-[0.8vw] lg:max-w-none"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
                     viewport={{ once: true }}
                   >
-                    We&apos;re here to break the ice, build confidence, and help you  skip  <br />the weird small talk. PONY helps you start strong, with shared <br />interests, better prompts, and zero pressure.
+                    We&apos;re here to break the ice, build confidence, and help<br />you  skip the weird small talk. PONY helps you start strong, with shared interests, better prompts, and zero pressure.
                   </motion.p>
                 </motion.div>
               </div>
