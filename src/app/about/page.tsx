@@ -107,7 +107,7 @@ export default function AboutPage() {
                   className="object-contain"
                   priority
                 /> 
-                <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-black/90 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
               </motion.div>
 
               <motion.div
@@ -125,7 +125,7 @@ export default function AboutPage() {
                   sizes="(min-width:1024px) 20vw, 100vw"
                   className="object-contain"
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-black/90 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
               </motion.div>
 
               <motion.div
@@ -143,7 +143,7 @@ export default function AboutPage() {
                   sizes="(min-width:1024px) 20vw, 100vw"
                   className="object-contain"
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-black/90 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
               </motion.div>
             </div>
 
