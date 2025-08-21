@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
 
           
-          <div className='mt-4 -mx-4 flex gap-4 items-end max-w-[93%]'>
+          <div className='md:hidden block mt-4 -mx-4 flex gap-4 items-end max-w-[93%]'>
             <AppStoreButtonsMobile />
             <LanguageDropdown/>
           </div>
