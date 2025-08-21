@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Button from '@/components/shared/Button';
+import { motion } from 'framer-motion';
 
 export default function AboutPage() {
   const toc = [
@@ -44,11 +46,14 @@ export default function AboutPage() {
         <div className="divide-y divide-white/10">
           {/* Mission */}
           <section id="mission" className="scroll-mt-28 py-10 first:pt-0">
+            
+            <div className="grid lg:grid-cols-2 gap-6 items-start">
+            <div>
             <Header title="Our Mission" />
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
               <p className="text-white/80 leading-relaxed">
                 We believe great relationships begin with meaningful interests. PONY helps you connect beyond the small talk by putting substance first—showing who you are and what you care about.
               </p>
+            </div>
               <div className="relative h-56 sm:h-72 lg:h-[22vw] rounded-2xl overflow-hidden border border-white/10">
                 <Image
                   src="/cafe.png"
@@ -64,7 +69,8 @@ export default function AboutPage() {
           </section>
 
           {/* What We Do */}
-          <section id="what-we-do" className="scroll-mt-28 py-10">
+          <section id="what-we-do" className="scroll-mt-28 py-10 flex flex-row justify-between items-center gap-10">
+            <div className='w-1/2'>
             <Header title="What We Do" />
             <p className="text-white/80 leading-relaxed mb-4">
               We design an experience that turns awkward intros into effortless conversations. From curated prompts to interest-forward discovery, PONY reduces friction and amplifies real chemistry.
@@ -74,16 +80,83 @@ export default function AboutPage() {
               <li>Thoughtful nudges that inspire better conversations.</li>
               <li>Tools that respect your time, intent, and safety.</li>
             </ul>
+            </div>
 
             {/* Mosaic visuals */}
-            <div className="mt-6 grid grid-cols-3 gap-3">
-              {['/v1.png', '/v2.png', '/v3.png'].map((src, i) => (
-                <div key={src} className="relative h-36 sm:h-48 lg:h-[16vw] rounded-xl overflow-hidden border border-white/10">
-                  <Image src={src} alt={`In-app experience ${i + 1}`} fill className="object-cover" sizes="(min-width:1024px) 30vw, 100vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                </div>
-              ))}
+            <motion.div
+            className="relative w-1/2 mt-5"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex gap-4">
+              <motion.div
+                className="relative flex-1 min-w-0 h-48 md:h-64 lg:h-[22vw] 2xl:h-[10.5vw] rounded-xl sm:rounded-2xl overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image
+                  src={'/v3.png'}
+                  alt="Vibe match example 1"
+                  fill
+                  sizes="(min-width:1024px) 20vw, 100vw"
+                  className="object-contain"
+                  priority
+                /> 
+                <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-black/90 to-transparent" />
+              </motion.div>
+
+              <motion.div
+                className="relative flex-1 min-w-0 h-48 md:h-64 lg:h-[22vw] 2xl:h-[10.5vw] rounded-xl sm:rounded-2xl overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image
+                  src={'/v1.png'}
+                  alt="Vibe match example 2"
+                  fill
+                  sizes="(min-width:1024px) 20vw, 100vw"
+                  className="object-contain"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-black/90 to-transparent" />
+              </motion.div>
+
+              <motion.div
+                className="relative flex-1 min-w-0 h-48 md:h-64 lg:h-[22vw] 2xl:h-[10.5vw] rounded-xl sm:rounded-2xl overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image
+                  src={'/v2.png'}
+                  alt="Vibe match example 3"
+                  fill
+                  sizes="(min-width:1024px) 20vw, 100vw"
+                  className="object-contain"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-black/90 to-transparent" />
+              </motion.div>
             </div>
+
+            <motion.div
+              className="w-full flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
+            >
+            
+            </motion.div>
+          </motion.div>
           </section>
 
           {/* Values */}

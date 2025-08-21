@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Button from '@/components/shared/Button';
+import { motion } from 'framer-motion';
 
 export default function SupportPage() {
   const toc = [
@@ -56,14 +59,80 @@ export default function SupportPage() {
                 </ul>
 
                 {/* Quick visual cues */}
-                <div className="mt-6 grid grid-cols-3 gap-3">
-                  {['/v1.png', '/v2.png', '/v3.png'].map((src, i) => (
-                    <div key={src} className="relative h-28 sm:h-36 lg:h-[11vw] rounded-xl overflow-hidden border border-white/10">
-                      <Image src={src} alt={`Onboarding visual ${i + 1}`} fill className="object-cover" sizes="(min-width:1024px) 22vw, 100vw" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                    </div>
-                  ))}
-                </div>
+                <motion.div
+            className="relative w-full max-w-[70vw] mt-5"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex gap-2 lg:gap-[0vw] 2xl:gap-4">
+              <motion.div
+                className="relative flex-1 min-w-0 h-48 md:h-64 lg:h-[22vw] 2xl:h-[10.5vw] rounded-xl sm:rounded-2xl overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image
+                  src={'/v3.png'}
+                  alt="Vibe match example 1"
+                  fill
+                  sizes="(min-width:1024px) 20vw, 100vw"
+                  className="object-contain"
+                  priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-16 lg:h-[3vw] 2xl:h-[1vw] bg-gradient-to-t from-black/90 to-transparent" />
+              </motion.div>
+
+              <motion.div
+                className="relative flex-1 min-w-0 h-48 md:h-64 lg:h-[22vw] 2xl:h-[10.5vw] rounded-xl sm:rounded-2xl overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image
+                  src={'/v1.png'}
+                  alt="Vibe match example 2"
+                  fill
+                  sizes="(min-width:1024px) 20vw, 100vw"
+                  className="object-contain"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-16 lg:h-[3vw] 2xl:h-[1vw] bg-gradient-to-t from-black/90 to-transparent" />
+              </motion.div>
+
+              <motion.div
+                className="relative flex-1 min-w-0 h-48 md:h-64 lg:h-[22vw] 2xl:h-[10.5vw] rounded-xl sm:rounded-2xl overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Image
+                  src={'/v2.png'}
+                  alt="Vibe match example 3"
+                  fill
+                  sizes="(min-width:1024px) 20vw, 100vw"
+                  className="object-contain"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-16 lg:h-[3vw] 2xl:h-[1vw]  bg-gradient-to-t from-black/90 to-transparent" />
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="w-full flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
+            >
+            
+            </motion.div>
+          </motion.div>
               </section>
 
               <section id="account" className="scroll-mt-28 py-10">
@@ -105,7 +174,7 @@ export default function SupportPage() {
                   {[
                     { q: 'How do matches work?', a: 'We surface people who share interests and conversational intent. Quality over quantity.' },
                     { q: 'Can I change my location?', a: 'Yes, adjust discovery settings in Settings → Discovery.' },
-                    { q: 'How do I reset my password?', a: 'Use “Forgot password” on the login screen or your sign-in provider tools.' },
+                    { q: 'How do I reset my password?', a: 'Use "Forgot password" on the login screen or your sign-in provider tools.' },
                   ].map((f) => (
                     <div key={f.q} className="border border-white/10 rounded-xl p-5">
                       <h3 className="text-white font-semibold">{f.q}</h3>
@@ -159,4 +228,3 @@ function Header({ title }: { title: string }) {
     </div>
   );
 }
-
