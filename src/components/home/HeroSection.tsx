@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/10" />
+        {/* <div className="absolute inset-0 bg-black/10" /> */}
       </div>
 
       {/* Background Image - Mobile */}
