@@ -69,7 +69,7 @@ export default function AboutPage() {
           </section>
 
           {/* What We Do */}
-          <section id="what-we-do" className="scroll-mt-28 py-10 flex md:flex-row justify-between items-center gap-10">
+          <section id="what-we-do" className="scroll-mt-28 py-10 flex md:flex-row flex-col justify-between items-center gap-10">
             <div className='md:w-1/2 w-full'>
             <Header title="What We Do" />
             <p className="text-white/80 leading-relaxed mb-4">
