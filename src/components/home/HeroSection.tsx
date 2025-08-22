@@ -56,7 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           px-4 sm:px-6 
         "
       >
-        <div className="text-center max-w-[92vw]">
+        <div className="text-center ">
           <motion.h1
             className="
               text-2xl sm:text-4xl md:text-6xl
