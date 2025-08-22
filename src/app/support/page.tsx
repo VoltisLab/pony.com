@@ -16,7 +16,7 @@ export default function SupportPage() {
   ];
 
   return (
-    <main className="w-full bg-black">
+    <main className="w-full bg-black ">
       {/* Header */}
       <section className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 pt-10 pb-6">
         <div className="text-center">
@@ -60,7 +60,7 @@ export default function SupportPage() {
 
                 {/* Quick visual cues */}
                 <motion.div
-            className="relative w-full max-w-[70vw] mt-5"
+            className="relative w-full md:max-w-[70vw] mt-5 "
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

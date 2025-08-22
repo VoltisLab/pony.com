@@ -69,8 +69,8 @@ export default function AboutPage() {
           </section>
 
           {/* What We Do */}
-          <section id="what-we-do" className="scroll-mt-28 py-10 flex flex-row justify-between items-center gap-10">
-            <div className='w-1/2'>
+          <section id="what-we-do" className="scroll-mt-28 py-10 flex md:flex-row justify-between items-center gap-10">
+            <div className='md:w-1/2 w-full'>
             <Header title="What We Do" />
             <p className="text-white/80 leading-relaxed mb-4">
               We design an experience that turns awkward intros into effortless conversations. From curated prompts to interest-forward discovery, PONY reduces friction and amplifies real chemistry.
@@ -84,7 +84,7 @@ export default function AboutPage() {
 
             {/* Mosaic visuals */}
             <motion.div
-            className="relative w-1/2 mt-5"
+            className="relative md:w-1/2 w-full mt-5"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
