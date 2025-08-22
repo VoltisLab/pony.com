@@ -59,7 +59,17 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
 
                   <motion.p
-                    className="text-white leading-[145%] text-sm md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[1.5vw] 3xl:text-[0.8vw] lg:max-w-none"
+                    className="md:block hidden text-white leading-[145%] text-sm md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[1.5vw] 3xl:text-[0.8vw] lg:max-w-none"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
+                    viewport={{ once: true }}
+                  >
+                    We&apos;re here to break the ice, build confidence, and help you<br />skip the weird small talk. PONY helps you start strong, with shared<br />interests, better prompts, and zero pressure.
+                  </motion.p>
+
+                  <motion.p
+                    className="md:hidden block text-white leading-[145%] text-sm md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[1.5vw] 3xl:text-[0.8vw] lg:max-w-none"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
