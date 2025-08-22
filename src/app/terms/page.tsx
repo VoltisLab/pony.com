@@ -24,7 +24,7 @@ export default function TermsOfUsePage() {
       <section className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 pt-10 pb-6">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-white via-white/70 to-[#ED1B24] bg-clip-text text-transparent">
+            <span className="text-white">
               Terms of Use
             </span>
           </h1>
@@ -182,8 +182,8 @@ export default function TermsOfUsePage() {
 
 function Header({ title }: { title: string }) {
   return (
-    <div className="flex items-center gap-3 mb-4">
-      <span className="inline-block h-3 w-3 rounded-full bg-[#ED1B24]" />
+    <div className="flex gap-3 mb-4">
+      {/* <span className="inline-block h-3 w-3 rounded-full bg-[#ED1B24]" /> */}
       <h2 className="text-xl sm:text-2xl font-semibold text-white">{title}</h2>
     </div>
   );
