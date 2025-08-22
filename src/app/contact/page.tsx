@@ -9,7 +9,7 @@ export default function ContactPage() {
       <section className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 pt-10 pb-6">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-white via-white/70 to-[#ED1B24] bg-clip-text text-transparent">
+            <span className="text-white">
               Contact Us
             </span>
           </h1>

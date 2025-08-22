@@ -1,7 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
 const Logo = () => {
   return (
-    <div className='flex gap-1 flex-row items-center'>
+    <Link href={'/'} className='flex gap-1 flex-row items-center'>
       <svg 
         className='m' 
         width="52" 
@@ -26,7 +27,7 @@ const Logo = () => {
       <p className="leading-[229%] mt-2  xl:text-[40px] font-medium">
         PONY
       </p>
-    </div>
+    </Link>
   )
 }
 

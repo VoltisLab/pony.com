@@ -18,7 +18,7 @@ export default function AboutPage() {
       <section className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 pt-10 pb-6">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-white via-white/70 to-[#ED1B24] bg-clip-text text-transparent">
+            <span className="text-white">
               About PONY
             </span>
           </h1>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             <div>
             <Header title="Our Mission" />
               <p className="text-white/80 leading-relaxed">
-                We believe great relationships begin with meaningful interests. PONY helps you connect beyond the small talk by putting substance first—showing who you are and what you care about.
+                We believe great relationships begin with meaningful interests. PONY helps you connect beyond the small talk by putting substance first, showing who you are and what you care about.
               </p>
             </div>
               <div className="relative h-56 sm:h-72 lg:h-[22vw] rounded-2xl overflow-hidden border border-white/10">
@@ -208,8 +208,8 @@ export default function AboutPage() {
 
 function Header({ title }: { title: string }) {
   return (
-    <div className="flex items-center gap-3 mb-4">
-      <span className="inline-block h-3 w-3 rounded-full bg-[#ED1B24]" />
+    <div className="flex items-center mb-4">
+      {/* <span className="inline-block h-3 w-3 rounded-full bg-[#ED1B24]" /> */}
       <h2 className="text-xl sm:text-2xl font-semibold text-white">{title}</h2>
     </div>
   );
