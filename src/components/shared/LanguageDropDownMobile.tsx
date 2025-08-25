@@ -20,7 +20,7 @@ export function LanguageDropdownMobile() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full lg:flex lg:mb-[1vw] 2xl:mb-[0.6vw] relative">
+    <div className="w-full lg:flex lg:mb-[1vw] 2xl:mb-[0.6vw] relative mt-4">
       {/* Dropdown (positioned above) */}
       {isOpen && (
         <div className="absolute bottom-full mb-2 w-full text-white border border-gray-300 rounded-lg shadow-lg z-10 bg-gray-800">
