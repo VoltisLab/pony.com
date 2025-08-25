@@ -33,7 +33,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
         >
           {/* Left */}
           <motion.div
-            className="w-full text-center lg:text-left space-y-6 sm:space-y-8 md:space-y-10 lg:max-w-[35vw]"
+            className="w-full text-center lg:text-left space-y-6 sm:space-y-8 md:space-y-10 lg:max-w-[35vw] 2xl:max-w-[30vw] "
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -84,7 +84,7 @@ const VibeSection: React.FC<VibeSectionProps> = ({
 
           {/* Right images */}
           <motion.div
-            className="relative w-full lg:w-[60vw] xl:w-[70vw]"
+            className="relative w-full lg:w-[60vw] xl:w-[70vw] 2xl:w-[40vw]"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
