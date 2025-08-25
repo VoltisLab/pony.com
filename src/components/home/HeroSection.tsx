@@ -60,7 +60,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <motion.h1
       className="w-full text-center
         text-2xl sm:text-4xl md:text-6xl
-        lg:text-[min(5.7vw,4rem)] xl:text-[min(5.5vw,4.5rem)] 2xl:text-[min(3vw,3rem)]
+        lg:text-[min(5.7vw,4rem)] xl:text-[min(5.5vw,4.5rem)] 2xl:text-[min(3vw,6.5rem)]
         leading-[160%]
         whitespace-nowrap
         font-bold text-white mb-0 sm:mb-2 px-2
@@ -75,9 +75,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <motion.p
       className="
         text-sm sm:text-2xl md:text-3xl
-        lg:text-[min(2.2vw,2rem)] xl:text-[min(2.5vw,2.2rem)] 2xl:text-[min(1.3vw,1.5rem)]
+        lg:text-[min(2.2vw,2rem)] xl:text-[min(2.5vw,2.2rem)] 2xl:text-[min(1.5vw,4rem)]
         whitespace-nowrap
-        text-white/90 mb-8 sm:mb-10 lg:mb-[2.5vw] text-center font-semibold px-4 pb-6 leading-[160%] 
+        text-white/90 mb-8 sm:mb-10 lg:mb-[2.5vw] 2xl:mb-[1vw] text-center font-semibold px-4 pb-6 leading-[160%] 
       "
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
