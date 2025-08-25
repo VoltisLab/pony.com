@@ -38,6 +38,7 @@ yarn-error.log*
 .vercel
 .claude
 .qodo
+.idea
 ~
 .idea/material_theme_project_new.xml
 .idea/vcs.xml
