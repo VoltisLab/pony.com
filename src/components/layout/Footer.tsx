@@ -67,7 +67,7 @@ const Footer = () => {
               </div>
               
               {/* Language Selector - Right Aligned */}
-              <div className="w-full hidden md:flex md:w-full flex justify-start ">
+              <div className="w-full hidden md:flex md:w-full justify-start ">
                 <LanguageDropdown/>
               </div>
               
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
 
           
-          <div className='md:hidden block mt-4 flex gap-4 items-end max-w-[100%]'>
+          <div className='md:hidden block mt-4 gap-4 items-end max-w-[100%]'>
             <AppStoreButtonsMobile />
             <LanguageDropdownMobile />
           </div>

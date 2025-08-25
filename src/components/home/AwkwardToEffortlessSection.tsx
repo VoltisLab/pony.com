@@ -48,7 +48,7 @@ const AwkwardToEffortlessSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.h2
-                    className=" leading-[145%] font-semibold text-white mb-4 lg:mb-[1.042vw] text-2xl md:text-[2.5rem] lg:text-[3vw] xl:text-[3.5vw] 2xl:text-[3.5vw] 3xl:text-[2vw]"
+                    className=" leading-[145%] font-semibold text-white mb-4 lg:mb-[1.042vw] text-2xl md:text-[2.5rem] lg:text-[3vw] xl:text-[3.5vw] 2xl:text-[1.4vw] "
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -59,7 +59,7 @@ const AwkwardToEffortlessSection = () => {
                   </motion.h2>
 
                   <motion.p
-                    className="md:block hidden text-white leading-[145%] text-sm md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[1.5vw] 3xl:text-[0.8vw] lg:max-w-none"
+                    className="md:block hidden text-white leading-[145%] text-sm md:text-sm lg:text-[1.2vw] xl:text-[1.5vw] 2xl:text-[0.6vw] lg:max-w-none"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}

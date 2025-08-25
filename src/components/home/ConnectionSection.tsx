@@ -43,7 +43,7 @@ const ConnectionSection = () => {
         >
           {/* Left: text (≈70%) */}
           <motion.div
-            className="lg:basis-[65%] relative flex bg-white h-[50vh] lg:h-full items-end justify-center lg:justify-start px-4 sm:px-8 md:px-12 lg:px-[5vw]"
+            className="lg:basis-[65%] relative flex bg-white h-[50vh] lg:h-full items-end justify-center lg:justify-start px-4 sm:px-8 md:px-12 lg:px-[5vw] 2xl:px-[2vw]"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -51,7 +51,7 @@ const ConnectionSection = () => {
           >
             <div className="max-w-full w-full lg:w-fit mb-5 md:mb-12 lg:mb-[5vw] flex flex-col items-center justify-center lg:items-start">
               <motion.h1
-                className="md:block hidden text-xl w-[70vw] lg:w-[100%] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-[3.5vw] 2xl:text-[2vw] font-bold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
+                className="md:block hidden 2xl:hidden text-xl w-[70vw] lg:w-[100%] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-[3.5vw] 2xl:text-[1.5vw] font-bold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -61,7 +61,17 @@ const ConnectionSection = () => {
               </motion.h1>
 
               <motion.h1
-                className="md:hidden block text-2xl w-[75vw] lg:w-[100%] text-center leading-[160%] font-bold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
+                className="md:hidden 2xl:block hidden text-xl w-[70vw] lg:w-[100%] text-center lg:text-start sm:text-3xl md:text-4xl lg:text-[3.5vw] 2xl:text-[1.5vw] font-bold leading-tight mb-4 sm:mb-6 lg:mb-[1vw]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                No Awkward Starts. Just<br />Real Connections.
+              </motion.h1>
+
+              <motion.h1
+                className="md:hidden block text-2xl w-[75vw] lg:w-[100%] text-center leading-[160%] font-bold mb-4 sm:mb-6 lg:mb-[1vw]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -71,7 +81,18 @@ const ConnectionSection = () => {
               </motion.h1>
 
               <motion.p
-                className="md:block hidden text-[10px] sm:text-lg md:text-xl lg:text-[1.6vw] 2xl:text-[1vw] font-semibold text-black leading-relaxed"
+                className="md:block hidden 2xl:hidden text-[10px] sm:text-lg md:text-xl lg:text-[1.6vw] 2xl:text-[0.8vw] font-semibold text-black leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                We remove the awkward, so you can focus on<br />
+                what really matters: <span className="font-bold">Building Something Real.</span>
+              </motion.p>
+
+              <motion.p
+                className=" hidden 2xl:block text-[10px] sm:text-lg md:text-xl lg:text-[1.6vw] 2xl:text-[0.7vw] font-semibold text-black leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
