@@ -51,18 +51,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div
         className="
           absolute inset-0 z-10 flex items-center justify-center gap-20
-          xl:h-full xl:mt-0 xl:sm:mt-20 xl:md:mt-24
+          xl:h-full xl:mt-0 xl:sm:mt-20 xl:md:mt-24 w-full
           lg:mt-[6.8vw] lg:gap-[6vw] lg:px-[6vw]
           px-4 sm:px-6 
         "
       >
-        <div className="text-center ">
+        <div className="md:text-center w-full ">
           <motion.h1
-            className="
+            className="w-full
               text-2xl sm:text-4xl md:text-6xl
-              lg:text-[5.7vw] 
-              lg:leading-[160%]
-              font-bold text-white mb-0 sm:mb-2 tracking-wide leading-tight px-2
+              lg:text-[5.7vw] xl:text-[5.5vw] 2xl:text-[3vw] 3xl:text-[1.1vw]
+              lg:leading-[160%] xl:leading-[1.1]
+              whitespace-nowrap
+              font-bold text-white mb-0 sm:mb-2 px-2
             "
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,8 +75,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <motion.p
             className="
               text-sm sm:text-2xl md:text-3xl
-              lg:text-[2.2vw] xl:text-[2.5vw] 
-              text-white/90 mb-8 sm:mb-10 lg:mb-[2.5vw] font-semibold px-4 pb-6 leading-[160%]
+              lg:text-[2.2vw] xl:text-[2.5vw] 2xl:text-[1.3vw] 
+              whitespace-nowrap 
+              text-white/90 mb-8 sm:mb-10 lg:mb-[2.5vw] font-semibold px-4 pb-6 lg:leading-[160%] xl:leading-[1.1]
             "
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
