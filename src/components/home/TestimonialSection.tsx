@@ -25,7 +25,7 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section className="w-full bg-black py-12 xl:py-[4vw]">
+    <section className="w-full bg-black py-12 xl:py-[4vw] 2xl:py-0 2xl:pb-16">
       {/* MOBILE/TABLET — unchanged */}
       <div className="xl:hidden px-0 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-8">
@@ -74,19 +74,30 @@ const TestimonialSection = () => {
         </div>
       </div>
 
-      {/* DESKTOP (xl+) — keep layout, switch px -> vw and anchor left */}
-      <div className="hidden xl:block relative w-screen">
-        {/* right background map fills the right half */}
-        <div className="absolute right-0 top-0 h-full w-[50vw] z-0">
-          <div className="relative w-full h-full rounded-[1.2vw]">
+      {/* DESKTOP (xl+) — responsive layout with 2xl classes */}
+      <div className="hidden xl:block relative w-full max-w-none overflow-hidden">
+        {/* right background map - responsive positioning */}
+        <div className="absolute right-0 top-0 h-full 
+                        xl:w-[50vw] 2xl:w-[45%] 
+                        z-0">
+          <div className="relative w-full h-full 
+                          xl:rounded-[1.2vw] 2xl:rounded-xl">
             <Image src="/map.png" alt="World map" fill className="object-contain" />
           </div>
         </div>
 
-        {/* left rail (image + testimonial) anchored with viewport padding */}
-        <div className="relative z-10 flex items-end gap-[1vw] pl-[5vw] pr-[2vw]">
-          {/* left: image stack */}
-          <div className="relative w-[22vw] h-[26vw] aspect-square z-[100]">
+        {/* left rail (image + testimonial) - responsive container */}
+        <div className="relative z-10 flex items-end 
+                        xl:gap-[1vw] 2xl:gap-4 
+                        xl:pl-[5vw] xl:pr-[2vw] 
+                        2xl:pl-20 2xl:pr-8 
+                        max-w-full">
+          
+          {/* left: image stack - responsive sizing */}
+          <div className="relative 
+                          xl:w-[22vw] xl:h-[26vw] 
+                          2xl:w-[480px] 2xl:h-[576px] 
+                          aspect-square z-[100]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`image-${currentIndex}`}
@@ -94,7 +105,9 @@ const TestimonialSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="w-full h-full relative rounded-[1.2vw] overflow-hidden border-2 aspect-square"
+                className="w-full h-full relative 
+                           xl:rounded-[1.2vw] 2xl:rounded-xl 
+                           overflow-hidden border-2 aspect-square"
               >
                 <Image src="/cafe.png" alt="Couple at cafe" fill className="object-contain" />
               </motion.div>
@@ -102,15 +115,25 @@ const TestimonialSection = () => {
 
             <motion.div
               key={`image-bg-${nextIndex}`}
-              className="absolute -top-[0.8vw] -left-[0.8vw] rounded-[1.2vw] overflow-hidden opacity-10 -z-10 w-full h-full"
+              className="absolute 
+                         xl:-top-[0.8vw] xl:-left-[0.8vw] 
+                         2xl:-top-3 2xl:-left-3 
+                         xl:rounded-[1.2vw] 2xl:rounded-xl 
+                         overflow-hidden opacity-10 -z-10 w-full h-full"
             >
               <Image src="/cafe.png" alt="Background image" fill className="object-contain" />
             </motion.div>
           </div>
 
-          {/* middle: fixed vw width so it never gets skinny or drift center */}
-          <div className="flex-0 w-[43vw] min-w-[33vw] ">
-            <div className="relative mb-[0.2vw]">
+          {/* middle: testimonial content - responsive width and sizing */}
+          <div className="flex-0 
+                          xl:w-[43vw] xl:min-w-[33vw] 
+                          2xl:w-[900px] 2xl:min-w-[750px] 
+                          2xl:max-w-[1050px]">
+            
+            {/* Title with responsive sizing */}
+            <div className="relative 
+                            xl:mb-[0.2vw] 2xl:mb-1">
               <AnimatePresence mode="wait">
                 <motion.h2
                   key={`title-${currentIndex}`}
@@ -118,55 +141,86 @@ const TestimonialSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
-                  className="text-[3.5vw] font-semibold text-white ml-[2vw]"
+                  className="xl:text-[3.5vw] 2xl:text-[90px] 
+                             font-semibold text-white 
+                             xl:ml-[2vw] 2xl:ml-8"
                 >
-                  PONY-<span className="text-[#ED1B24] font-medium text-[3.5vw]">tale</span>
+                  PONY-<span className="text-[#ED1B24] font-medium 
+                                        xl:text-[3.5vw] 2xl:text-[90px]">tale</span>
                 </motion.h2>
               </AnimatePresence>
 
-              <h2 className="text-[3.5vw] font-semibold text-white absolute -top-[0.6vw] left-[2.6vw] opacity-10 -z-10">
-                PONY-<span className="font-medium text-[3.5vw]">tale</span>
+              <h2 className="xl:text-[3.5vw] 2xl:text-[90px] 
+                             font-semibold text-white absolute 
+                             xl:-top-[0.6vw] xl:left-[2.6vw] 
+                             2xl:-top-2 2xl:left-10 
+                             opacity-10 -z-10">
+                PONY-<span className="font-medium 
+                                      xl:text-[3.5vw] 2xl:text-[90px]">tale</span>
               </h2>
             </div>
 
+            {/* Testimonial card with responsive sizing */}
             <AnimatePresence mode="wait">
-  <motion.div
-    key={currentIndex}
-    initial={{ opacity: 0, x: 50, scale: 0.95 }}
-    animate={{ opacity: 1, x: 0, scale: 1 }}
-    exit={{ opacity: 0, x: -50, scale: 0.95 }}
-    transition={{ duration: 0.5, ease: 'easeInOut' }}
-    className="bg-white rounded-[0.8vw] md:rounded-r-[0.8vw] md:rounded-l-none p-[1.2vw] w-full h-[12vw] shadow-2xl border border-[#ED1B24]"
-  >
-    <div className="flex items-start gap-[0.6vw]">
-      <p className="text-black text-[1.3vw] leading-[1.6]">
-        <span className="text-red-500 text-[1.3vw] font-bold align-[-0.2em] inline-block mr-[0.3vw]" aria-hidden>
-          <BiSolidQuoteAltLeft />
-        </span>
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 50, scale: 0.95 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -50, scale: 0.95 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className="bg-white 
+                           xl:rounded-[0.8vw] xl:rounded-r-[0.8vw] xl:rounded-l-none 
+                           2xl:rounded-r-4xl 2xl:rounded-l-none 
+                           xl:p-[1.2vw] 2xl:p-5 
+                           w-full 
+                           xl:h-[12vw] 2xl:h-[312px] 
+                           shadow-2xl border border-[#ED1B24]"
+              >
+                <div className="flex items-start 
+                                xl:gap-[0.6vw] 2xl:gap-2">
+                  <p className="text-black 
+                                xl:text-[1.3vw] 2xl:text-[27px] 
+                                xl:leading-[1.6] 2xl:leading-relaxed">
+                    <span className="text-red-500 
+                                     xl:text-[1.3vw] 2xl:text-[27px] 
+                                     font-bold align-[-0.2em] inline-block 
+                                     xl:mr-[0.3vw] 2xl:mr-1" 
+                          aria-hidden>
+                      <BiSolidQuoteAltLeft />
+                    </span>
 
-        {testimonials[currentIndex].text.split('skip the awkward').map((part, i, arr) => (
-          <React.Fragment key={i}>
-            {part}
-            {i < arr.length - 1 && (
-              <span className="text-red-500 font-semibold">skip the awkward</span>
-            )}
-          </React.Fragment>
-        ))}
+                    {testimonials[currentIndex].text.split('skip the awkward').map((part, i, arr) => (
+                      <React.Fragment key={i}>
+                        {part}
+                        {i < arr.length - 1 && (
+                          <span className="text-red-500 font-semibold">skip the awkward</span>
+                        )}
+                      </React.Fragment>
+                    ))}
 
-        <span className="text-red-500 text-[1.3vw] font-bold align-[-0.2em] inline-block ml-[0.6vw]" aria-hidden>
-          <BiSolidQuoteAltRight />
-        </span>
-      </p>
-    </div>
-  </motion.div>
-</AnimatePresence>
+                    <span className="text-red-500 
+                                     xl:text-[1.3vw] 2xl:text-[27px] 
+                                     font-bold align-[-0.2em] inline-block 
+                                     xl:ml-[0.6vw] 2xl:ml-2" 
+                          aria-hidden>
+                      <BiSolidQuoteAltRight />
+                    </span>
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
 
-
-            <div className="flex gap-[0.6vw] mt-[1.2vw] justify-center">
+            {/* Dots indicator with responsive sizing */}
+            <div className="flex 
+                            xl:gap-[0.6vw] 2xl:gap-2 
+                            xl:mt-[1.2vw] 2xl:mt-5 
+                            justify-center">
               {testimonials.map((_, i) => (
                 <motion.div
                   key={i}
-                  className={`w-[0.5vw] h-[0.5vw] rounded-full transition-colors duration-300 ${
+                  className={`xl:w-[0.5vw] xl:h-[0.5vw] 
+                              2xl:w-2 2xl:h-2 
+                              rounded-full transition-colors duration-300 ${
                     i === currentIndex ? 'bg-[#FFFFFF4D]' : 'bg-[#FFFFFF1A]'
                   }`}
                   animate={{ scale: i === currentIndex ? 1.2 : 1 }}

@@ -43,7 +43,7 @@ const ConnectionSection = () => {
         >
           {/* Left: text (≈70%) */}
           <motion.div
-            className="lg:basis-[65%] relative flex bg-white h-[50vh] lg:h-full items-end justify-center lg:justify-start px-4 sm:px-8 md:px-12 lg:px-[5vw] 2xl:px-[2vw]"
+            className="lg:basis-[65%] relative flex bg-white h-[50vh] 2xl:h-[35vh] lg:h-full items-end justify-center lg:justify-start px-4 sm:px-8 md:px-12 lg:px-[5vw] 2xl:px-[2vw]"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -118,7 +118,7 @@ const ConnectionSection = () => {
 
           {/* Right: image (≈30%) */}
           <motion.div
-            className="md:block hidden lg:basis-[35%] relative h-[50vh] lg:h-full"
+            className="md:block hidden lg:basis-[35%] relative h-[50vh] 2xl:h-[35vh] lg:h-full"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
